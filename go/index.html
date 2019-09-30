@@ -9,7 +9,8 @@
 		<iframe src="<?php echo $_GET["path"]?>" height="1200px" width="100%"></iframe>
 		<br />
 		<div>
-			<input type="text" value="http://honbraofficial.github.io/skola/go?path=2p.html" id="linkInput" readonly>
+			<h1>Sdílet</h1>
+			<input type="text" value="http://honbraofficial.github.io/skola/go" id="linkInput" readonly>
 			<button onclick="linkCopy()">Zkopírovat odkaz</button>
 			<script>function linkCopy() {
   var copyText = document.getElementById("linkInput");
@@ -44,7 +45,6 @@ function linkCopy5() {
   element.innerHTML = "";
 }
 			</script>
-			<h1 id="copiedLabel"></h1>
-			<?php echo $_GET["path"]?>
+			<h2 id="copiedLabel"></h2>
 	</body>
 </html>

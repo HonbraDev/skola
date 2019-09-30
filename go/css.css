@@ -1,0 +1,116 @@
+button {
+    background-color: #a6a6a6;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+}
+
+.arrow {
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #808080;
+}
+
+img {
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+}
+
+iframe {
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+	border: none;
+}
+
+body {
+    max-width: auto;
+    margin: 5em;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+}
+
+.indexbody {
+	padding: 0px;
+}
+
+.subbody {
+	margin: 0em;
+	border-radius: 0em;
+    box-shadow: none;
+	padding: 0px;
+}
+
+html {
+    background: url("bgimage.png") no-repeat center center fixed;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    padding-top: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-family: "Nunito", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-align: center;
+
+}
+
+.nohtmlstyle {
+	padding-top: none;
+    padding-left: none;
+    padding-right: none;
+    padding-bottom: none;
+	background: url("about:blank");
+	background: color(white)
+}
+
+div {
+    max-width: auto;
+    margin: 5em auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+}
+
+.arrowdiv {
+    max-width: 300px;
+}
+
+a:link,
+a:visited {
+    color: #38488f;
+    text-decoration: none;
+}
+
+a:link {
+    color: #f0f0f2;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f0f0f2;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f0f0f0;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #f0f0f2;
+    background-color: transparent;
+    text-decoration: underline;

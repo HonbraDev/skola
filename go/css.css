@@ -27,19 +27,33 @@ iframe {
     border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
 	border: none;
+	background-color: #fff;
 }
 
 body {
     max-width: auto;
     margin: 5em;
     padding: 50px;
-    background-color: #fff;
     border-radius: 1em;
+	background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
+}
+
+input {
+	border: none;
+	color: black;
+	padding: 15px 25px;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 1em;
+	background-color: #eee;
 }
 
 .indexbody {
 	padding: 0px;
+	background-color: none;
+    box-shadow: none;
+	background-color: transparent;
 }
 
 .subbody {
@@ -114,3 +128,4 @@ a:active {
     color: #f0f0f2;
     background-color: transparent;
     text-decoration: underline;
+}

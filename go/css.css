@@ -101,6 +101,16 @@ div {
     max-width: 300px;
 }
 
+.reddiv {
+    max-width: 300px;
+	background-color: #ffcccc;
+}
+
+.greendiv {
+    max-width: 300px;
+	background-color: #ccffcc;
+}
+
 a:link,
 a:visited {
     color: #38488f;

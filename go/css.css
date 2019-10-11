@@ -137,10 +137,6 @@ a:active {
 	text-decoration: underline;
 }
 
-html {
-	font-family: "segoe ui light"
-}
-
 .navbar {
 	width: 100%;
 	min-height: 65px;

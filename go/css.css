@@ -131,7 +131,6 @@ a:hover {
 }
 
 a:active {
-<<<<<<< HEAD
 	color: #f0f0f2;
 	background-color: transparent;
 	text-decoration: underline;
@@ -225,9 +224,4 @@ a:active {
 		width: 10%;
 	}
 }
-=======
-    color: #f0f0f2;
-    background-color: transparent;
-    text-decoration: underline;
 }
->>>>>>> 2d0dd085b752741bd4694b051e98d84f758f6b20

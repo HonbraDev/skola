@@ -7,7 +7,7 @@ body {
     background-color: black;
 }
 iframe {
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     animation: iframe-control-animation 2s;
     animation-delay: 2s;

@@ -6,6 +6,7 @@
 
     <title>Mapa školy</title>
     <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap" rel="stylesheet" />
     <meta charset="UTF-8">
 </head>
 
@@ -15,7 +16,7 @@
     <div>
 
 
-        <iframe alt="pokus" allowFullScreen="true" style="display:block; border:0 none;" src="https://panoraven.com/embed/XTg8tVmpP7"></iframe>
+        <iframe id="myFrame" alt="pokus" allowFullScreen="true" style="display:block; border:0 none;" src="https://panoraven.com/embed/XTg8tVmpP7"></iframe>
         <div class="strip">
             <div class="arrowdiv" align="center">
                 <!-- ←↑→↓></!-->
@@ -27,12 +28,23 @@
                 <a class="arrow-unaviable">↓</a>
             </div>
             <div class="info">
-                <h1>1. patro</h1><br>
-                Na tomto místě nejsou žádné zajímavosti k zobrazení.
+                <h1>1. patro</h1>
+                <p>Na tomto místě nejsou žádné zajímavosti k zobrazení.</p>
+				<br />
+				<p class="footer"><a href="pouzity-kod.html">Použitý kód</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN1WAsGd2f35KYxiObpxuZebDCzpMtq0jlNAXNqyrpoXOHkQ/viewform?usp=pp_url&entry.693813151=/skola/go/index.html">Nahlásit chybu</a></p>
                 <a href="pokus" class="button-more-info">VÍCE INFORMACÍ</a>
             </div>
         </div>
     </div>
+	<!--<script>
+setTimeout(removeWatermark1, 2000);
+
+function removeWatermark1() {
+var iframe = document.getElementById("myFrame");
+var elmnt = iframe.contentWindow.document.getElementsByClassName("viewer-logo-wrap top-left")[0];
+elmnt.style.display = "none";
+};></!-->
+	</script>
 </body>
 
 </html>

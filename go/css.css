@@ -45,7 +45,7 @@ div.arrowdiv {
 }
 div.info {
     animation: iframe-control-animation 2s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-bottom: 20px;
     margin-left: 20px;
@@ -56,6 +56,7 @@ div.info {
     opacity: 0;
     font-size: 20px;
     vertical-align: middle;
+	font-family: "Poppins", Calibri, sans-serif;
 }
 div.info h1 {
     font-size: 50px;
@@ -64,11 +65,22 @@ div.info h1 {
     padding-left: 20px;
     margin-top: 50px;
     animation: info-content-animation 0.5s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
+div.info p {
+	font-family: "Poppins", Calibri, sans-serif;
+}
+div.info p.footer {
+	color: #808080;
+	font-size: 15px;
+}
+div.info p.footer a {
+	color: #808080;
+	font-size: 15px;
+}
 div.strip {
-    animation: strip-animation 2s;
+    animation: strip-animation 1s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-top: 20px;
@@ -175,11 +187,11 @@ a.button-more-info {
 
 @keyframes strip-animation {
     0% {
-        height: 0vh;
+        background-color: rgba(61,61,61,0);;
     }
 
     100% {
-        height: 25vh;
+        background-color: rgba(61,61,61,.5);;
     }
 }
 @keyframes button-hover {

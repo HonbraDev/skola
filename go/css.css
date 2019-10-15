@@ -28,7 +28,7 @@ iframe {
 }*/
 div.arrowdiv {
     animation: iframe-control-animation 2s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-top: 20px;
     padding-bottom: 20px;

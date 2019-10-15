@@ -1,57 +1,38 @@
-<!doctype html>
+﻿<!doctype html>
+
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css.css" media="screen" />
-		<title>Virtuální prohlídka školy</title>
-	</head>
 
-	<body class="indexbody">
-			<div class="navbar">
-			<button><p>Home</p></button>
-			<button><p>Škola</p></button>
-			<button><p>CMD</p></button>
-			<button><p>Hypercatch</p></button>
-		</div>
-		<iframe src="2p.html" height="750px" width="100%"></iframe>
-		<br />
-		<div class="arrowdiv">
-			<h1>Sdílet</h1>
-			<input type="text" value="http://honbraofficial.github.io/skola/go" id="linkInput" readonly /><p />
-			<button onclick="linkCopy()">Zkopírovat odkaz</button><p />
-			<script>function linkCopy() {
-  var copyText = document.getElementById("linkInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  var element = document.getElementById("copiedLabel");
-  element.innerHTML = "Zkopírováno!";
-  setTimeout(linkCopy2, 1000);
-}
+<head>
 
-function linkCopy2() {
-  var element = document.getElementById("copiedLabel");
-  element.innerHTML = "Zkopírováno! (3)";
-  setTimeout(linkCopy3, 1000);
-}
+    <title>Mapa školy</title>
+    <link rel="stylesheet" type="text/css" href="CSS.css" media="screen" />
+    <meta charset="UTF-8">
+</head>
 
-function linkCopy3() {
-  var element = document.getElementById("copiedLabel");
-  element.innerHTML = "Zkopírováno! (2)";
-  setTimeout(linkCopy4, 1000);
-}
 
-function linkCopy4() {
-  var element = document.getElementById("copiedLabel");
-  element.innerHTML = "Zkopírováno! (1)";
-  setTimeout(linkCopy5, 1000);
-}
 
-function linkCopy5() {
-  var element = document.getElementById("copiedLabel");
-  element.innerHTML = "";
-}
-			</script>
-			<h2 id="copiedLabel"></h2>
-	</body>
+<body>
+    <div>
+
+
+        <iframe alt="pokus" allowFullScreen="true" style="display:block; border:0 none;" src="https://panoraven.com/embed/XTg8tVmpP7"></iframe>
+        <div class="strip">
+            <div class="arrowdiv" align="center">
+                <!-- ←↑→↓></!-->
+
+                <a class="arrow-unaviable">↑</a><br />
+
+                <a class="arrow-unaviable">←</a><a class="space">←</a><a href="2p-p.html" class="arrow">→</a><br />
+
+                <a class="arrow-unaviable">↓</a>
+            </div>
+            <div class="info">
+                <h1>1. patro</h1><br>
+                Na tomto místě nejsou žádné zajímavosti k zobrazení.
+                <a href="pokus" class="button-more-info">VÍCE INFORMACÍ</a>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
 
 body {
     color: white;
@@ -78,12 +78,11 @@ div.strip {
     width: 100vw;
     height: 25vh;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px, rgba(0, 0, 0, 0.23) 0px 3px 20px;
     vertical-align: central;
-    bottom: 0px;
+    bottom: 40px;
     right: 0px;
     position: fixed;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(61,61,61,.5);
 }
 a.arrow, a.arrow-unaviable, a.space {
     text-decoration: none;
@@ -176,7 +175,7 @@ a.button-more-info {
 
 @keyframes strip-animation {
     0% {
-        height: 0px;
+        height: 0vh;
     }
 
     100% {

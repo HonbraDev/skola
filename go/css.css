@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
 
+div.vice h1 {
+	font-size: 50px;
+    font-family: "Poppins", Calibri, sans-serif;
+}
+div.vice p {
+	font-size: 20px;
+    font-family: "Poppins", Calibri, sans-serif;
+}
 body {
     color: white;
     font-family: "Lora", Calibri, sans-serif;
     margin: 0px;
     background-color: black;
+}
+body div.vice {
+	padding: 50px;
 }
 iframe {
     height: 100vh;
@@ -142,8 +153,25 @@ a.button-more-info {
     font-family: "Josefin Sans", Calibri, sans-serif;
 	font-size: 15px;
 }
-
-
+a.button-back {
+	animation: button-unhover 0.5s;
+    background-color: dodgerblue;
+    text-align: right;
+    vertical-align: middle;
+    position: fixed;
+    right: 50px;
+    top: 100px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
+}
+a.button-back:hover {
+    animation: button-hover 0.5s;
+    animation-fill-mode: forwards;
+}
 @media (max-width: 800px) {
     div.info {
         opacity: 0;
@@ -159,6 +187,7 @@ a.button-more-info {
     div.strip {
         text-align: center;
 		float: none;
+		align: center;
     }
 }
 

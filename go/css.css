@@ -28,11 +28,11 @@ iframe {
 }*/
 div.arrowdiv {
     animation: iframe-control-animation 2s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
     float: right;
     width: 260px;
     text-align: center;
@@ -40,8 +40,11 @@ div.arrowdiv {
     opacity: 0;
     position: fixed;
     right: 0px;
-    border-left: solid 1px blue;
+    border-left: solid 4px dodgerblue;
     vertical-align: central;
+	height: 150px;
+	overflow: hidden;
+	
 }
 div.info {
     animation: iframe-control-animation 2s;
@@ -49,19 +52,18 @@ div.info {
     animation-fill-mode: forwards;
     padding-bottom: 20px;
     margin-left: 20px;
-    float: left;
     width: 70vw;
-    height: 140px;
     text-align: left;
     opacity: 0;
     font-size: 20px;
     vertical-align: middle;
 	font-family: "Poppins", Calibri, sans-serif;
+	
 }
 div.info h1 {
     font-size: 50px;
     font-family: "Poppins", Calibri, sans-serif;
-    border-left: 4px solid blue;
+    border-left: 8px solid dodgerblue;
     padding-left: 20px;
     margin-top: 50px;
     animation: info-content-animation 0.5s;
@@ -70,17 +72,21 @@ div.info h1 {
 }
 div.info p {
 	font-family: "Poppins", Calibri, sans-serif;
+	font-size: 17px;
 }
 div.info p.footer {
 	color: #808080;
 	font-size: 15px;
+    position: fixed;
+    left: 10px;
+    bottom: 40px;
 }
 div.info p.footer a {
 	color: #808080;
 	font-size: 15px;
 }
 div.strip {
-    animation: strip-animation 1s;
+    animation: strip-animation 2s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-top: 20px;
@@ -88,13 +94,13 @@ div.strip {
     margin-left: 20px;
     float: left;
     width: 100vw;
-    height: 25vh;
+    height: 225px;
     text-align: center;
     vertical-align: central;
     bottom: 40px;
     right: 0px;
     position: fixed;
-    background-color: rgba(61,61,61,.5);
+    background-color: rgba(0,0,0,1);
 }
 a.arrow, a.arrow-unaviable, a.space {
     text-decoration: none;
@@ -128,12 +134,13 @@ a.button-more-info {
     vertical-align: middle;
     position: fixed;
     right: 300px;
-    bottom: 12.5vh;
+    bottom: 75px;
     padding: 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
 }
 
 
@@ -146,9 +153,12 @@ a.button-more-info {
     }
     div.arrowdiv {
         right: initial;
-    }
+		border-left: none;
+		position: initial;
+	}
     div.strip {
         text-align: center;
+		float: none;
     }
 }
 

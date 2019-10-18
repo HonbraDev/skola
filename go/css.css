@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
 
 div.vice h1 {
-	font-size: 50px;
+    font-size: 50px;
     font-family: "Poppins", Calibri, sans-serif;
-}
+    border-left: 8px solid dodgerblue;
+    padding-left: 20px;
+    margin-top: 100px;
+    animation: vice-text-animation 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+	}
 div.vice p {
 	font-size: 20px;
     font-family: "Poppins", Calibri, sans-serif;
+    animation: vice-text-animation 1.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+	opacity: 0;
 }
 body {
     color: white;
@@ -244,7 +254,27 @@ a.button-back:hover {
     }
 }
 @keyframes info-content-animation {
+    0% {
+        opacity: 0;
+		margin-top: 50px;
+    }
+
     100% {
-        margin-top: 10px;
+		margin-top: 10px;
+        opacity: 1;
+    }
+}
+@keyframes vice-text-animation {
+    0% {
+		margin-top: 75px;
+        opacity: 0;
+    }
+	75% {
+		margin-top: 10px;
+	}
+
+    100% {
+        opacity: 1;
+		margin-top: 10px;
     }
 }

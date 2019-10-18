@@ -144,12 +144,7 @@ a.arrow:hover {
     animation: arrows-hover 0.5s;
     animation-fill-mode: forwards;
 }
-a.button-more-info:hover {
-    animation: button-hover 0.5s;
-    animation-fill-mode: forwards;
-}
 a.button-more-info {
-    animation: button-unhover 0.5s;
     background-color: dodgerblue;
     text-align: right;
     vertical-align: middle;
@@ -162,9 +157,13 @@ a.button-more-info {
     border-radius: 5px;
     font-family: "Josefin Sans", Calibri, sans-serif;
 	font-size: 15px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+a.button-more-info:hover {
+	background-color: royalblue;
 }
 a.button-back {
-	animation: button-unhover 0.5s;
     background-color: dodgerblue;
     text-align: right;
     vertical-align: middle;
@@ -177,11 +176,37 @@ a.button-back {
     border-radius: 5px;
     font-family: "Josefin Sans", Calibri, sans-serif;
 	font-size: 15px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
 }
 a.button-back:hover {
-    animation: button-hover 0.5s;
-    animation-fill-mode: forwards;
+	background-color: royalblue;
 }
+a.button-more-info-small {
+	animation: button-unhover 0.5s;
+    background-color: dodgerblue;
+    text-align: right;
+    vertical-align: middle;
+    position: fixed;
+    left: 20px;
+    bottom: 60px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
+	display: none;
+    animation: info-content-animation 0.5s;
+    animation-fill-mode: forwards;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+
+}
+a.button-more-info-small:hover {
+	background-color: royalblue;
+}
+
 @media (max-width: 800px) {
     div.info {
         opacity: 0;
@@ -199,8 +224,10 @@ a.button-back:hover {
 		float: none;
 		align: center;
     }
+	a.button-more-info-small {
+		display: initial;
+	}
 }
-
 
 @keyframes iframe-control-animation {
     0% {
@@ -241,16 +268,6 @@ a.button-back:hover {
 
     100% {
         background-color: rgba(61,61,61,.5);;
-    }
-}
-@keyframes button-hover {
-    100% {
-        background-color: royalblue;
-    }
-}
-@keyframes button-unhover {
-    100% {
-        background-color: dodgerblue;
     }
 }
 @keyframes info-content-animation {

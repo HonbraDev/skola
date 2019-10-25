@@ -207,6 +207,11 @@ a.button-more-info-small:hover {
 	background-color: royalblue;
 }
 
+iframe.panoraven {
+	display: block;
+	border: 0 none;
+}
+
 @media (max-width: 800px) {
     div.info {
         opacity: 0;

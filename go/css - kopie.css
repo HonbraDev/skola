@@ -30,10 +30,10 @@ body div.vice {
 iframe {
     height: 100vh;
     width: 100vw;
-    /*animation: iframe-control-animation 2s;
+    animation: iframe-control-animation 2s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
-    opacity: 0; */
+    opacity: 0;
 }
 /* div.square {
     background-color: dimgray;
@@ -49,7 +49,7 @@ iframe {
 }*/
 div.arrowdiv {
     animation: iframe-control-animation 2s;
-    /*animation-delay: 2s;*/
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-top: 50px;
     padding-bottom: 20px;
@@ -69,7 +69,7 @@ div.arrowdiv {
 }
 div.info {
     animation: iframe-control-animation 2s;
-    /*animation-delay: 2s;*/
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     padding-bottom: 20px;
     margin-left: 20px;
@@ -88,7 +88,7 @@ div.info h1 {
     padding-left: 20px;
     margin-top: 50px;
     animation: info-content-animation 0.5s;
-    /*animation-delay: 2s;*/
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 div.info p {
@@ -107,9 +107,9 @@ div.info p.footer a {
 	font-size: 15px;
 }
 div.strip {
-    /*animation: strip-animation 2s;
+    animation: strip-animation 2s;
     animation-delay: 2s;
-    animation-fill-mode: forwards;*/
+    animation-fill-mode: forwards;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 20px;
@@ -121,7 +121,7 @@ div.strip {
     bottom: 40px;
     right: 0px;
     position: fixed;
-    background-color: rgba(61,61,61,0.5);
+    background-color: rgba(0,0,0,1);
 }
 a.arrow, a.arrow-unaviable, a.space {
     text-decoration: none;
@@ -183,6 +183,7 @@ a.button-back:hover {
 	background-color: royalblue;
 }
 a.button-more-info-small {
+	animation: button-unhover 0.5s;
     background-color: dodgerblue;
     text-align: right;
     vertical-align: middle;

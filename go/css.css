@@ -159,10 +159,10 @@ a.button-more-info {
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-more-info:hover {
 	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-back {
     background-color: dodgerblue;
@@ -179,10 +179,10 @@ a.button-back {
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-back:hover {
 	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-more-info-small {
     background-color: dodgerblue;
@@ -202,11 +202,11 @@ a.button-more-info-small {
     animation-fill-mode: forwards;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
 a.button-more-info-small:hover {
 	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 iframe.panoraven {
@@ -223,12 +223,12 @@ img.logo {
 	opacity: 0.5;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	display: none;
 }
 
 img.logo:hover {
 	opacity: 1;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 @media (max-width: 880px) {

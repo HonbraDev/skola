@@ -94,15 +94,15 @@ div.info h1 {
 div.info p {
 	font-family: "Poppins", Calibri, sans-serif;
 	font-size: 17px;
-}
-div.info p.footer {
+} p.footer {
 	color: #808080;
 	font-size: 15px;
     position: fixed;
     left: 10px;
     bottom: 40px;
 }
-div.info p.footer a {
+
+p.footer a {
 	color: #808080;
 	font-size: 15px;
 }
@@ -159,6 +159,7 @@ a.button-more-info {
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-more-info:hover {
 	background-color: royalblue;
@@ -178,6 +179,7 @@ a.button-back {
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 a.button-back:hover {
 	background-color: royalblue;
@@ -188,7 +190,7 @@ a.button-more-info-small {
     vertical-align: middle;
     position: fixed;
     left: 20px;
-    bottom: 60px;
+    bottom: 130px;
     padding: 20px;
     text-decoration: none;
     color: white;
@@ -200,6 +202,7 @@ a.button-more-info-small {
     animation-fill-mode: forwards;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
 a.button-more-info-small:hover {
@@ -211,7 +214,24 @@ iframe.panoraven {
 	border: 0 none;
 }
 
-@media (max-width: 800px) {
+img.logo {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	border-radius: 5px;
+	width: 200px;
+	opacity: 0.5;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	display: none;
+}
+
+img.logo:hover {
+	opacity: 1;
+}
+
+@media (max-width: 880px) {
     div.info {
         opacity: 0;
         height: 0px;
@@ -231,6 +251,25 @@ iframe.panoraven {
 	a.button-more-info-small {
 		display: initial;
 	}
+	
+	a.arrow, a.arrow-unaviable, a.space {
+		animation: none;
+	}
+	
+	a.logo-x {
+		display: none;
+	}
+}
+
+a.zpet {
+	color: #808080;
+	font-size: 15px;
+	font-family: poppins;
+	text-decoration: none;
+    animation: vice-text-animation 1.5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+	opacity: 0;
 }
 
 @keyframes iframe-control-animation {

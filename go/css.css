@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
- div.vice h1 {
+html {
+    overflow: hidden;
+}
+ 
+div.vice h1 {
      font-size: 50px;
      font-family: "Poppins", Calibri, sans-serif;
      border-left: 8px solid dodgerblue;
@@ -298,11 +302,9 @@
  @keyframes strip-animation {
      0% {
          background-color: rgba(61,61,61,0);
-        ;
     }
      100% {
          background-color: rgba(61,61,61,.5);
-        ;
     }
 }
  @keyframes info-content-animation {

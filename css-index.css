@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
+
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+div.header {
+	background-image: url("Photo.jpg");
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 10vw;
+	padding-bottom: 10vw;
+	text-align: center;
+	font-family: Poppins;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: right bottom;
+	color: white;
+	text-shadow: 1px 2px 3px black;
+}
+
+h0 {
+	font-size: 20px;
+}
+
+h1 {
+	font-size: 50px;
+}

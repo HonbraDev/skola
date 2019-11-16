@@ -37,20 +37,19 @@ iframe {
 }
 
 html {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 div.vice h1 {
-	font-size: 50px;
-	font-family: "Poppins", Calibri, sans-serif;
-	border-left: 8px solid dodgerblue;
-	padding-left: 20px;
-	margin-top: 100px;
-	animation: vice-text-animation 1s;
-	animation-delay: 0s;
-	animation-fill-mode: forwards;
+     font-size: 50px;
+     font-family: "Poppins", Calibri, sans-serif;
+     border-left: 8px solid dodgerblue;
+     padding-left: 20px;
+     margin-top: 100px;
+     animation: vice-text-animation 1s;
+     animation-delay: 0s;
+     animation-fill-mode: forwards;
 }
-
 div.arrowdiv {
 	animation: iframe-control-animation 2s;
 	/*animation-delay: 2s;

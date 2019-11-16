@@ -1,40 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
- div.vice h1 {
-     font-size: 50px;
-     font-family: "Poppins", Calibri, sans-serif;
-     border-left: 8px solid dodgerblue;
-     padding-left: 20px;
-     margin-top: 100px;
-     animation: vice-text-animation 1s;
-     animation-delay: 0s;
-     animation-fill-mode: forwards;
+div.vice h1 {
+	font-size: 50px;
+	font-family: "Poppins", Calibri, sans-serif;
+	border-left: 8px solid dodgerblue;
+	padding-left: 20px;
+	margin-top: 100px;
+	animation: vice-text-animation 1s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
 }
- div.vice p {
-     font-size: 20px;
-     font-family: "Poppins", Calibri, sans-serif;
-     animation: vice-text-animation 1.5s;
-     animation-delay: 0s;
-     animation-fill-mode: forwards;
-     opacity: 0;
+
+div.vice p {
+	font-size: 20px;
+	font-family: "Poppins", Calibri, sans-serif;
+	animation: vice-text-animation 1.5s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
- body {
-     color: white;
-     font-family: "Lora", Calibri, sans-serif;
-     margin: 0px;
-     background-color: black;
+
+body {
+	color: white;
+	font-family: "Lora", Calibri, sans-serif;
+	margin: 0px;
+	background-color: black;
 }
- body div.vice {
-     padding: 50px;
+
+body div.vice {
+	padding: 50px;
 }
- iframe {
-     height: 100vh;
-     width: 100vw;
-    /*animation: iframe-control-animation 2s;
+
+iframe {
+	height: 100vh;
+	width: 100vw;
+	/*animation: iframe-control-animation 2s;
      animation-delay: 2s;
      animation-fill-mode: forwards;
      opacity: 0;
      */
 }
+
+
 /* div.square {
      background-color: dimgray;
      padding-top: 20px;
@@ -48,283 +54,308 @@
      height: 60vh;
 }
 */
- div.arrowdiv {
-     animation: iframe-control-animation 2s;
-    /*animation-delay: 2s;
+
+div.arrowdiv {
+	animation: iframe-control-animation 2s;
+	/*animation-delay: 2s;
     */
-     animation-fill-mode: forwards;
-     padding-top: 50px;
-     padding-bottom: 20px;
-     margin-right: 0px;
-     float: right;
-     width: 260px;
-     text-align: center;
-     margin-bottom: 1px;
-     opacity: 0;
-     position: fixed;
-     right: 0px;
-     border-left: solid 4px dodgerblue;
-     vertical-align: central;
-     height: 150px;
-     overflow: hidden;
+	animation-fill-mode: forwards;
+	padding: 30px 0px;
+	float: right;
+	width: 260px;
+	text-align: center;
+	opacity: 0;
+	vertical-align: central;
+	height: 150px;
+	overflow: hidden;
+	background-color: rgba(61, 61, 61, 0.5);
+	border-radius: 0.5em;
+	position: fixed;
+	bottom: 80px;
+	right: 40px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
 }
- div.info {
-     animation: iframe-control-animation 2s;
-    /*animation-delay: 2s;
+
+div.arrowdiv:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.info {
+	animation: iframe-control-animation 2s;
+	/*animation-delay: 2s;
     */
-     animation-fill-mode: forwards;
-     padding-bottom: 20px;
-     margin-left: 20px;
-     width: 70vw;
-     text-align: left;
-     opacity: 0;
-     font-size: 20px;
-     vertical-align: middle;
-     font-family: "Poppins", Calibri, sans-serif;
+	animation-fill-mode: forwards;
+	padding-bottom: 20px;
+	margin-left: 20px;
+	width: 70vw;
+	text-align: left;
+	opacity: 0;
+	font-size: 20px;
+	vertical-align: middle;
+	font-family: "Poppins", Calibri, sans-serif;
+	position: fixed;
+	bottom: 40px;
+	left: 0px;
+	display: none;
 }
- div.info h1 {
-     font-size: 50px;
-     font-family: "Poppins", Calibri, sans-serif;
-     border-left: 8px solid dodgerblue;
-     padding-left: 20px;
-     margin-top: 50px;
-     animation: info-content-animation 0.5s;
-    /*animation-delay: 2s;
+
+div.info h1 {
+	font-size: 50px;
+	font-family: "Poppins", Calibri, sans-serif;
+	border-left: 8px solid dodgerblue;
+	padding-left: 20px;
+	margin-top: 50px;
+	animation: info-content-animation 0.5s;
+	/*animation-delay: 2s;
     */
-     animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
- div.info p {
-     font-family: "Poppins", Calibri, sans-serif;
-     font-size: 17px;
+
+div.info p {
+	font-family: "Poppins", Calibri, sans-serif;
+	font-size: 17px;
 }
- p.footer {
-     color: #808080;
-     font-size: 15px;
-     position: fixed;
-     left: 10px;
-     bottom: 40px;
+
+p.footer {
+	color: #808080;
+	font-size: 15px;
+	position: fixed;
+	left: 10px;
+	bottom: 40px;
 }
- p.footer a {
-     color: #808080;
-     font-size: 15px;
+
+p.footer a {
+	color: #808080;
+	font-size: 15px;
 }
- div.strip {
-    /*animation: strip-animation 2s;
+
+div.strip {
+	/*animation: strip-animation 2s;
      animation-delay: 2s;
      animation-fill-mode: forwards;
     */
-     padding-top: 20px;
-     padding-bottom: 20px;
-     margin-left: 20px;
-     float: left;
-     width: 100vw;
-     height: 225px;
-     text-align: center;
-     vertical-align: central;
-     bottom: 40px;
-     right: 0px;
-     position: fixed;
-     background-color: rgba(61,61,61,0.5);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 20px;
+	float: left;
+	width: 100vw;
+	height: 225px;
+	text-align: center;
+	vertical-align: central;
+	bottom: 40px;
+	right: 0px;
+	position: fixed;
+	display: none;
 }
- a.arrow, a.arrow-unaviable, a.space {
-     text-decoration: none;
-     font-size: 40px;
-     padding: 10px;
-     font-family: "Calibri Light", sans-serif;
+
+a.arrow,
+a.arrow-unaviable,
+a.space {
+	text-decoration: none;
+	font-size: 40px;
+	padding: 10px;
+	font-family: "Calibri Light", sans-serif;
 }
- a.space {
-     opacity: 0;
+
+a.space {
+	opacity: 0;
 }
- a.arrow {
-     color: white;
-     animation: arrows-unhover 0.5s;
+
+a.arrow {
+	color: white;
+	animation: arrows-unhover 0.5s;
 }
- a.arrow-unaviable {
-     color: gray;
+
+a.arrow-unaviable {
+	color: gray;
 }
- a.arrow:hover {
-     animation: arrows-hover 0.5s;
-     animation-fill-mode: forwards;
+
+a.arrow:hover {
+	animation: arrows-hover 0.5s;
+	animation-fill-mode: forwards;
 }
- a.button-more-info {
-     background-color: dodgerblue;
-     text-align: right;
-     vertical-align: middle;
-     position: fixed;
-     right: 300px;
-     bottom: 200px;
-     padding: 20px;
-     text-decoration: none;
-     color: white;
-     border-radius: 5px;
-     font-family: "Josefin Sans", Calibri, sans-serif;
-     font-size: 15px;
-     -webkit-transition-duration: 0.4s;
-    /* Safari */
-     transition-duration: 0.4s;
+
+a.button-more-info {
+	background-color: dodgerblue;
+	text-align: right;
+	vertical-align: middle;
+	position: fixed;
+	right: 320px;
+	bottom: 80px;
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+	font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
 }
- a.button-more-info:hover {
-     background-color: royalblue;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+a.button-more-info:hover {
+	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
- a.button-back {
-     background-color: dodgerblue;
-     text-align: right;
-     vertical-align: middle;
-     position: fixed;
-     right: 50px;
-     top: 100px;
-     padding: 20px;
-     text-decoration: none;
-     color: white;
-     border-radius: 5px;
-     font-family: "Josefin Sans", Calibri, sans-serif;
-     font-size: 15px;
-     -webkit-transition-duration: 0.4s;
-    /* Safari */
-     transition-duration: 0.4s;
+
+a.button-back {
+	background-color: dodgerblue;
+	text-align: right;
+	vertical-align: middle;
+	position: fixed;
+	right: 50px;
+	top: 100px;
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+	font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
 }
- a.button-back:hover {
-     background-color: royalblue;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+a.button-back:hover {
+	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
- a.button-more-info-small {
-     background-color: dodgerblue;
-     text-align: right;
-     vertical-align: middle;
-     position: fixed;
-     left: 20px;
-     bottom: 130px;
-     padding: 20px;
-     text-decoration: none;
-     color: white;
-     border-radius: 5px;
-     font-family: "Josefin Sans", Calibri, sans-serif;
-     font-size: 15px;
-     display: none;
-     animation: info-content-animation 0.5s;
-     animation-fill-mode: forwards;
-     -webkit-transition-duration: 0.4s;
-    /* Safari */
-     transition-duration: 0.4s;
+
+iframe.panoraven {
+	display: block;
+	border: 0 none;
 }
- a.button-more-info-small:hover {
-     background-color: royalblue;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+img.logo {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	border-radius: 5px;
+	width: 200px;
+	opacity: 0.5;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	display: none;
 }
- iframe.panoraven {
-     display: block;
-     border: 0 none;
+
+img.logo:hover {
+	opacity: 1;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
- img.logo {
-     position: fixed;
-     top: 20px;
-     right: 20px;
-     border-radius: 5px;
-     width: 200px;
-     opacity: 0.5;
-     -webkit-transition-duration: 0.4s;
-    /* Safari */
-     transition-duration: 0.4s;
-     display: none;
+
+@media (max-width: 880px) {
+	div.info {
+		opacity: 0;
+		height: 0px;
+		animation: none;
+		display: none;
+	}
+	div.arrowdiv {
+		right: 0px;
+		bottom: 40px;
+		border-radius: initial;
+	}
+	div.arrowdiv:hover {
+		box-shadow: initial;
+	}
+	div.strip {
+		text-align: center;
+		float: none;
+		align: center;
+	}
+	a.button-more-info {
+		bottom: 40px;
+		right: 260px;
+		border-radius: initial;
+		background-color: rgba(61, 61, 61, 0.5);
+	}
+	a.button-more-info:hover {
+		box-shadow: initial;
+		background-color: rgba(61, 61, 61, 0.5);
+	}
+	a.arrow,
+	a.arrow-unaviable,
+	a.space {
+		animation: none;
+	}
+	a.logo-x {
+		display: none;
+	}
 }
- img.logo:hover {
-     opacity: 1;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+a.zpet {
+	color: #808080;
+	font-size: 15px;
+	font-family: poppins;
+	text-decoration: none;
+	animation: vice-text-animation 1.5s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
- @media (max-width: 880px) {
-     div.info {
-         opacity: 0;
-         height: 0px;
-         animation: none;
-         display: none;
-    }
-     div.arrowdiv {
-         right: initial;
-         border-left: none;
-         position: initial;
-    }
-     div.strip {
-         text-align: center;
-         float: none;
-         align: center;
-    }
-     a.button-more-info-small {
-         display: initial;
-    }
-     a.arrow, a.arrow-unaviable, a.space {
-         animation: none;
-    }
-     a.logo-x {
-         display: none;
-    }
+
+@keyframes iframe-control-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
- a.zpet {
-     color: #808080;
-     font-size: 15px;
-     font-family: poppins;
-     text-decoration: none;
-     animation: vice-text-animation 1.5s;
-     animation-delay: 0s;
-     animation-fill-mode: forwards;
-     opacity: 0;
+
+@keyframes arrows-hover {
+	0% {
+		color: white;
+	}
+	100% {
+		color: dodgerblue;
+	}
 }
- @keyframes iframe-control-animation {
-     0% {
-         opacity: 0;
-    }
-     100% {
-         opacity: 1;
-    }
+
+@keyframes arrows-unhover {
+	0% {
+		color: dodgerblue;
+	}
+	100% {
+		color: white;
+	}
 }
- @keyframes arrows-hover {
-     0% {
-         color: white;
-    }
-     100% {
-         color: dodgerblue;
-         font-size: 45px;
-    }
+
+@keyframes strip-animation {
+	0% {
+		background-color: rgba(61, 61, 61, 0);
+		;
+	}
+	100% {
+		background-color: rgba(61, 61, 61, .5);
+		;
+	}
 }
- @keyframes arrows-unhover {
-     0% {
-         color: dodgerblue;
-         font-size: 45px 
-    }
-     100% {
-         color: white;
-    }
+
+@keyframes info-content-animation {
+	0% {
+		opacity: 0;
+		margin-top: 50px;
+	}
+	100% {
+		margin-top: 10px;
+		opacity: 1;
+	}
 }
- @keyframes strip-animation {
-     0% {
-         background-color: rgba(61,61,61,0);
-        ;
-    }
-     100% {
-         background-color: rgba(61,61,61,.5);
-        ;
-    }
-}
- @keyframes info-content-animation {
-     0% {
-         opacity: 0;
-         margin-top: 50px;
-    }
-     100% {
-         margin-top: 10px;
-         opacity: 1;
-    }
-}
- @keyframes vice-text-animation {
-     0% {
-         margin-top: 75px;
-         opacity: 0;
-    }
-     75% {
-         margin-top: 10px;
-    }
-     100% {
-         opacity: 1;
-         margin-top: 10px;
-    }
+
+@keyframes vice-text-animation {
+	0% {
+		margin-top: 75px;
+		opacity: 0;
+	}
+	75% {
+		margin-top: 10px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 10px;
+	}
 }

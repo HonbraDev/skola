@@ -75,6 +75,7 @@ div.arrowdiv {
 
 div.arrowdiv:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	bottom: 90px;
 }
 
 div.info {
@@ -189,6 +190,7 @@ a.button-more-info {
 a.button-more-info:hover {
 	background-color: royalblue;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	bottom: 90px;
 }
 
 a.button-back {
@@ -251,6 +253,7 @@ img.logo:hover {
 	}
 	div.arrowdiv:hover {
 		box-shadow: initial;
+		bottom: 40px;
 	}
 	div.strip {
 		text-align: center;
@@ -266,6 +269,7 @@ img.logo:hover {
 	a.button-more-info:hover {
 		box-shadow: initial;
 		background-color: rgba(61, 61, 61, 0.5);
+		bottom: 40px;
 	}
 	a.arrow,
 	a.arrow-unaviable,

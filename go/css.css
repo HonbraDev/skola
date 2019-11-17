@@ -36,10 +36,6 @@ iframe {
 	/*animation: iframe-control-animation 2s;*/
 }
 
-html {
-    overflow: hidden;
-}
-
 div.vice h1 {
      font-size: 50px;
      font-family: "Poppins", Calibri, sans-serif;
@@ -55,13 +51,11 @@ div.arrowdiv {
 	/*animation-delay: 2s;
     */
 	animation-fill-mode: forwards;
-	padding: 30px 0px;
+	padding: 30px;
 	float: right;
-	width: 260px;
 	text-align: center;
 	opacity: 0;
 	vertical-align: central;
-	height: 150px;
 	overflow: hidden;
 	background-color: rgba(61, 61, 61, 0.5);
 	border-radius: 0.5em;
@@ -174,12 +168,12 @@ a.button-more-info {
 	text-align: right;
 	vertical-align: middle;
 	position: fixed;
-	right: 320px;
+	right: 309px;
 	bottom: 80px;
 	padding: 20px;
 	text-decoration: none;
 	color: white;
-	border-radius: 5px;
+	border-radius: 0.5em;
 	font-family: "Josefin Sans", Calibri, sans-serif;
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s;
@@ -191,29 +185,6 @@ a.button-more-info:hover {
 	background-color: royalblue;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	bottom: 85px;
-}
-
-a.button-back {
-	background-color: dodgerblue;
-	text-align: right;
-	vertical-align: middle;
-	position: fixed;
-	right: 50px;
-	top: 100px;
-	padding: 20px;
-	text-decoration: none;
-	color: white;
-	border-radius: 5px;
-	font-family: "Josefin Sans", Calibri, sans-serif;
-	font-size: 15px;
-	-webkit-transition-duration: 0.4s;
-	/* Safari */
-	transition-duration: 0.4s;
-}
-
-a.button-back:hover {
-	background-color: royalblue;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 iframe.panoraven {
@@ -239,7 +210,7 @@ img.logo:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (max-width: 880px) {
+@media (max-width: 500px) {
 	div.info {
 		opacity: 0;
 		height: 0px;
@@ -247,13 +218,12 @@ img.logo:hover {
 		display: none;
 	}
 	div.arrowdiv {
-		right: 0px;
-		bottom: 40px;
-		border-radius: initial;
+		right: 5px;
+		bottom: 45px;
 	}
 	div.arrowdiv:hover {
 		box-shadow: initial;
-		bottom: 40px;
+		bottom: 45px;
 	}
 	div.strip {
 		text-align: center;
@@ -261,20 +231,19 @@ img.logo:hover {
 		align: center;
 	}
 	a.button-more-info {
-		bottom: 40px;
-		right: 260px;
-		border-radius: initial;
+		bottom: 45px;
+		right: 213px;
 		background-color: rgba(61, 61, 61, 0.5);
 	}
 	a.button-more-info:hover {
-		box-shadow: initial;
 		background-color: rgba(61, 61, 61, 0.5);
-		bottom: 40px;
+		bottom: 45px;
 	}
 	a.arrow,
 	a.arrow-unaviable,
 	a.space {
 		animation: none;
+		font-size: 30px;
 	}
 	a.logo-x {
 		display: none;

@@ -58,7 +58,6 @@ div.arrowdiv {
 	vertical-align: central;
 	overflow: hidden;
 	background-color: rgba(61, 61, 61, 0.5);
-	border-radius: 0.5em;
 	position: fixed;
 	bottom: 80px;
 	right: 40px;
@@ -86,7 +85,6 @@ div.info {
 	bottom: 80px;
 	left: 40px;
 	background-color: rgba(61, 61, 61, 0.5);
-	border-radius: 0.5em;
 	-webkit-transition-duration: 0.4s;
 	/* Safari */
 	transition-duration: 0.4s;
@@ -179,7 +177,6 @@ a.button-show-info {
 	padding: 20px;
 	text-decoration: none;
 	color: white;
-	border-radius: 0.5em;
 	font-family: "Josefin Sans", Calibri, sans-serif;
 	font-size: 15px;
 	-webkit-transition-duration: 0.4s;
@@ -206,7 +203,6 @@ img.logo {
 	position: fixed;
 	top: 20px;
 	right: 20px;
-	border-radius: 5px;
 	width: 200px;
 	opacity: 0.5;
 	-webkit-transition-duration: 0.4s;
@@ -249,6 +245,17 @@ img.logo:hover {
 	margin-right: auto;
 }
 
+p.ver {
+	color: white;
+	font-family: Calibri;
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	z-index: 9998;
+	padding: 10px;
+	background-color: black;
+}
+
 @media (max-width: 1100px) {
 	div.info {
 		opacity: 0;
@@ -282,7 +289,6 @@ img.logo:hover {
 		padding: 10px;
 		text-decoration: none;
 		color: white;
-		border-radius: 0.5em;
 		font-family: "Josefin Sans", Calibri, sans-serif;
 		font-size: 15px;
 		-webkit-transition-duration: 0.4s;

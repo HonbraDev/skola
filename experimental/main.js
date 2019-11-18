@@ -8,6 +8,6 @@ document.getElementById("info").style.display = "none";
 document.getElementById("showInfo").style.display = "initial";
 document.getElementById("hideInfo").style.display = "none";
 }
-function jsNotice() {
+function main() {
 document.getElementById("jsNotice").style.display = "none";
 }

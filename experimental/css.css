@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
+div.vice h1 {
+	font-size: 50px;
+	font-family: "Poppins", Calibri, sans-serif;
+	border-left: 8px solid dodgerblue;
+	padding-left: 20px;
+	margin-top: 100px;
+	animation: vice-text-animation 1s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+div.vice p {
+	font-size: 20px;
+	font-family: "Poppins", Calibri, sans-serif;
+	animation: vice-text-animation 1.5s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+body {
+	color: white;
+	font-family: "Lora", Calibri, sans-serif;
+	margin: 0px;
+	background-color: black;
+}
+
+body div.vice {
+	padding: 50px;
+}
+
+iframe {
+	height: 100vh;
+	width: 100vw;
+	/*animation: iframe-control-animation 2s;*/
+}
+
+div.vice h1 {
+	font-size: 50px;
+	font-family: "Poppins", Calibri, sans-serif;
+	border-left: 8px solid dodgerblue;
+	padding-left: 20px;
+	margin-top: 100px;
+	animation: vice-text-animation 1s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+div.arrowdiv {
+	animation: iframe-control-animation 2s;
+	/*animation-delay: 2s;
+		*/
+	animation-fill-mode: forwards;
+	padding: 30px;
+	float: right;
+	text-align: center;
+	opacity: 0;
+	vertical-align: central;
+	overflow: hidden;
+	background-color: rgba(61, 61, 61, 0.5);
+	border-radius: 0.5em;
+	position: fixed;
+	bottom: 80px;
+	right: 40px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+}
+
+div.arrowdiv:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.info {
+	animation: iframe-control-animation 0.4s;
+	/*animation-delay: 2s;
+		*/
+	animation-fill-mode: forwards;
+	padding: 30px;
+	text-align: left;
+	opacity: 0;
+	font-size: 20px;
+	vertical-align: middle;
+	font-family: "Poppins", Calibri, sans-serif;
+	position: fixed;
+	bottom: 80px;
+	left: 40px;
+	background-color: rgba(61, 61, 61, 0.5);
+	border-radius: 0.5em;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	display: none;
+}
+
+div.info:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.info h1 {
+	font-size: 50px;
+	font-family: "Poppins", Calibri, sans-serif;
+	border-left: 8px solid dodgerblue;
+	padding-left: 20px;
+	margin-top: 50px;
+	animation: info-content-animation 0.5s;
+	/*animation-delay: 2s;
+		*/
+	animation-fill-mode: forwards;
+}
+
+div.info p {
+	font-family: "Poppins", Calibri, sans-serif;
+	font-size: 17px;
+}
+
+p.footer {
+	color: #808080;
+	font-size: 15px;
+	position: fixed;
+	left: 70px;
+	bottom: 70px;
+}
+
+p.footer a {
+	color: #808080;
+	font-size: 15px;
+}
+
+div.strip {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 20px;
+	float: left;
+	width: 100vw;
+	height: 225px;
+	text-align: center;
+	vertical-align: central;
+	bottom: 40px;
+	right: 0px;
+	position: fixed;
+	display: none;
+}
+
+a.arrow,
+a.arrow-unaviable,
+a.space {
+	text-decoration: none;
+	font-size: 40px;
+	padding: 10px;
+	font-family: "Calibri Light", sans-serif;
+}
+
+a.space {
+	opacity: 0;
+}
+
+a.arrow {
+	color: white;
+	animation: arrows-unhover 0.5s;
+}
+
+a.arrow-unaviable {
+	color: gray;
+}
+
+a.arrow:hover {
+	animation: arrows-hover 0.5s;
+	animation-fill-mode: forwards;
+}
+
+a.button-show-info {
+	background-color: dodgerblue;
+	text-align: right;
+	vertical-align: middle;
+	position: fixed;
+	right: 309px;
+	bottom: 80px;
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	border-radius: 0.5em;
+	font-family: "Josefin Sans", Calibri, sans-serif;
+	font-size: 15px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+a.button-show-info:hover {
+	background-color: royalblue;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a.button-more-info {
+	display: none;
+}
+
+iframe.panoraven {
+	display: block;
+	border: 0 none;
+}
+
+img.logo {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	border-radius: 5px;
+	width: 200px;
+	opacity: 0.5;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	display: none;
+}
+
+img.logo:hover {
+	opacity: 1;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.outer {
+	display: table;
+	height: 100vh;
+	width: 100vw;
+	background-color: white;
+	z-index: 9999;
+	position: fixed;
+	color: black;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-family: Calibri;
+}
+
+.outer a {
+	color: black;
+	text-decoration: underline;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+	div.info {
+		opacity: 0;
+		height: 0px;
+		animation: none;
+		display: none;
+	}
+}
+
+@media (max-width: 700px) {
+	div.arrowdiv {
+		right: 5px;
+		bottom: 45px;
+	}
+	div.arrowdiv:hover {
+		box-shadow: initial;
+		bottom: 45px;
+	}
+	div.strip {
+		text-align: center;
+		float: none;
+		align: center;
+	}
+	a.button-more-info {
+		bottom: 45px;
+		right: 213px;
+		background-color: rgba(61, 61, 61, 0.5);
+		text-align: right;
+		vertical-align: middle;
+		position: fixed;
+		padding: 10px;
+		text-decoration: none;
+		color: white;
+		border-radius: 0.5em;
+		font-family: "Josefin Sans", Calibri, sans-serif;
+		font-size: 15px;
+		-webkit-transition-duration: 0.4s;
+		/* Safari */
+		transition-duration: 0.4s;
+	}
+	a.button-show-info {
+		display: none;
+	}
+	a.arrow,
+	a.arrow-unaviable,
+	a.space {
+		animation: none;
+		font-size: 30px;
+	}
+	a.logo-x {
+		display: none;
+	}
+}
+
+a.zpet {
+	color: #808080;
+	font-size: 15px;
+	font-family: poppins;
+	text-decoration: none;
+	animation: vice-text-animation 1.5s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes iframe-control-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes arrows-hover {
+	0% {
+		color: white;
+	}
+	100% {
+		color: dodgerblue;
+	}
+}
+
+@keyframes arrows-unhover {
+	0% {
+		color: dodgerblue;
+	}
+	100% {
+		color: white;
+	}
+}
+
+@keyframes strip-animation {
+	0% {
+		background-color: rgba(61, 61, 61, 0);
+		;
+	}
+	100% {
+		background-color: rgba(61, 61, 61, .5);
+		;
+	}
+}
+
+@keyframes info-content-animation {
+	0% {
+		opacity: 0;
+		margin-top: 50px;
+	}
+	100% {
+		margin-top: 10px;
+		opacity: 1;
+	}
+}
+
+@keyframes vice-text-animation {
+	0% {
+		margin-top: 75px;
+		opacity: 0;
+	}
+	75% {
+		margin-top: 10px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 10px;
+	}
+}

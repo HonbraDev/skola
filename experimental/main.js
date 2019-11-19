@@ -11,7 +11,7 @@ document.getElementById("hideInfo").style.display = "none";
 function main() {
 document.getElementById("jsNotice").style.display = "none";
 }
-function fullScreen {
+function fullScreen() {
 elem.requestFullscreen();
 elem.mozRequestFullScreen();
 elem.webkitRequestFullscreen();

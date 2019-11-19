@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
+HTML {
+	overflow: hidden;
+}
+
 div.vice h1 {
 	font-size: 50px;
 	font-family: "Poppins", Calibri, sans-serif;

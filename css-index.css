@@ -20,6 +20,10 @@ div.header {
 	background-position: right bottom;
 	color: white;
 	text-shadow: 1px 2px 3px black;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	height: 100vh;
 }
 
 h0 {

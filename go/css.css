@@ -35,7 +35,7 @@ iframe {
 	width: 100vw;
 	/*animation: iframe-control-animation 2s;*/
 	position: fixed;
-	top: 0px;
+	bottom: 0px;
 	left: 0px;
 	z-index: 0;
 }

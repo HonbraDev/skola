@@ -7,7 +7,7 @@ body {
 }
 
 div.header {
-	background-image: url("Photo.jpg");
+	background: url("bgimage.png") no-repeat center center fixed; webkit-background-size: cover; moz-background-size: cover; o-background-size: cover; background-size: cover;
 	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -20,6 +20,11 @@ div.header {
 	background-position: right bottom;
 	color: white;
 	text-shadow: 1px 2px 3px black;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	height: 100vh;
+	width: 100vw;
 }
 
 h0 {
@@ -28,4 +33,9 @@ h0 {
 
 h1 {
 	font-size: 50px;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
 }

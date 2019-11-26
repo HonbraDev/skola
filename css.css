@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
-HTML {
-	overflow: hidden;
-}
-
 div.vice h1 {
 	font-size: 50px;
 	font-family: "Poppins", Calibri, sans-serif;
@@ -38,6 +34,10 @@ iframe {
 	height: 100vh;
 	width: 100vw;
 	/*animation: iframe-control-animation 2s;*/
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 0;
 }
 
 div.vice h1 {
@@ -63,15 +63,20 @@ div.arrowdiv {
 	overflow: hidden;
 	background-color: rgba(61, 61, 61, 0.5);
 	position: fixed;
-	bottom: 80px;
-	right: 40px;
+	bottom: 60px;
+	right: -187px;
 	-webkit-transition-duration: 0.4s;
 	/* Safari */
 	transition-duration: 0.4s;
+	border-top-left-radius: 0.5em;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: 0.5em;
+	border: 1px solid black;
 }
 
 div.arrowdiv:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	right: -1px;
 }
 
 div.info {
@@ -86,17 +91,23 @@ div.info {
 	vertical-align: middle;
 	font-family: "Poppins", Calibri, sans-serif;
 	position: fixed;
-	bottom: 80px;
-	left: 40px;
+	bottom: 60px;
+	left: -535px;;
 	background-color: rgba(61, 61, 61, 0.5);
-	-webkit-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.6s;
 	/* Safari */
-	transition-duration: 0.4s;
-	display: none;
+	width: 515px;
+	transition-duration: 0.6s;
+	border-top-left-radius: unset;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: unset;
+	border: 1px solid black;
+	padding-bottom: 0px;
 }
 
 div.info:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	left: -1px;
 }
 
 div.info h1 {
@@ -119,9 +130,6 @@ div.info p {
 p.footer {
 	color: #808080;
 	font-size: 15px;
-	position: fixed;
-	left: 70px;
-	bottom: 70px;
 }
 
 p.footer a {
@@ -169,29 +177,6 @@ a.arrow-unaviable {
 a.arrow:hover {
 	animation: arrows-hover 0.5s;
 	animation-fill-mode: forwards;
-}
-
-a.button-show-info {
-	background-color: dodgerblue;
-	text-align: right;
-	vertical-align: middle;
-	position: fixed;
-	right: 309px;
-	bottom: 80px;
-	padding: 20px;
-	text-decoration: none;
-	color: white;
-	font-family: "Josefin Sans", Calibri, sans-serif;
-	font-size: 15px;
-	-webkit-transition-duration: 0.4s;
-	/* Safari */
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-a.button-show-info:hover {
-	background-color: royalblue;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a.button-more-info {
@@ -260,18 +245,9 @@ p.ver {
 	background-color: black;
 }
 
-@media (max-width: 1100px) {
-	div.info {
-		opacity: 0;
-		height: 0px;
-		animation: none;
-		display: none;
-	}
-}
-
 @media (max-width: 700px) {
 	div.arrowdiv {
-		right: 5px;
+		right: 0px;
 		bottom: 45px;
 	}
 	div.arrowdiv:hover {
@@ -285,7 +261,7 @@ p.ver {
 	}
 	a.button-more-info {
 		bottom: 45px;
-		right: 213px;
+		left: 0px;
 		background-color: rgba(61, 61, 61, 0.5);
 		text-align: right;
 		vertical-align: middle;
@@ -298,6 +274,13 @@ p.ver {
 		-webkit-transition-duration: 0.4s;
 		/* Safari */
 		transition-duration: 0.4s;
+		display: initial;
+		transition-duration: 0.6s;
+		border-top-left-radius: unset;
+		border-top-right-radius: 0.5em;
+		border-bottom-right-radius: 0.5em;
+		border-bottom-left-radius: unset;
+		border: 1px solid black;
 	}
 	a.button-show-info {
 		display: none;
@@ -309,6 +292,9 @@ p.ver {
 		font-size: 30px;
 	}
 	a.logo-x {
+		display: none;
+	}
+	div.info {
 		display: none;
 	}
 }

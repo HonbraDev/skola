@@ -10,6 +10,7 @@ document.getElementById("hideInfo").style.display = "none";
 }
 function main() {
 document.getElementById("jsNotice").style.display = "none";
+document.write("<p class=ver>Commit 108</p>")
 }
 function fullScreen() {
 elem.requestFullscreen();

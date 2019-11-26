@@ -72,7 +72,6 @@ div.arrowdiv {
     border-top-right-radius: unset;
     border-bottom-right-radius: unset;
     border-bottom-left-radius: 0.5em;
-	border: 1px solid black;
 }
 
 div.arrowdiv:hover {
@@ -102,7 +101,6 @@ div.info {
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: unset;
-	border: 1px solid black;
 	padding-bottom: 0px;
 }
 
@@ -280,7 +278,6 @@ p.ver {
 		border-top-right-radius: 0.5em;
 		border-bottom-right-radius: 0.5em;
 		border-bottom-left-radius: unset;
-		border: 1px solid black;
 	}
 	a.button-show-info {
 		display: none;

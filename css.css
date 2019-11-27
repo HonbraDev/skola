@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
-@import "@material/fab/dist/mdc.fab.css";
+@import "material-components-web/material-components-web";
 div.vice h1 {
 	font-size: 50px;
 	font-family: "Poppins", Calibri, sans-serif;
@@ -245,6 +245,12 @@ p.ver {
 	background-color: black;
 }
 
+a.chyba {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
 @media (max-width: 700px) {
 	div.arrowdiv {
 		right: 0px;
@@ -309,7 +315,7 @@ a.zpet {
 	opacity: 0;
 }
 
-.mdc-fab {
+a.chyba {
 	position: fixed;
 	top: 20px;
 	right: 20px;

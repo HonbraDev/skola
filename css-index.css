@@ -7,38 +7,67 @@ body {
 }
 
 div.header {
-	background: url("bgimage.jpg") no-repeat center center fixed; webkit-background-size: cover; moz-background-size: cover; o-background-size: cover; background-size: cover;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-top: 10vw;
-	padding-bottom: 10vw;
-	text-align: center;
-	font-family: Poppins;
-	background-size: 100%;
-	background-attachment: fixed;
-	background-position: right bottom;
-	color: white;
-	text-shadow: 1px 2px 3px black;
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	height: 100vh;
-	width: 100vw;
+    background: url("bgimage.jpg") no-repeat center center fixed;
+    webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    text-align: center;
+    font-family: Poppins;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: right bottom;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 100vw;
 }
 
 h0 {
-	font-size: 20px;
+    font-size: 20px;
+    animation: header0-animation 1.5s;
+    animation-fill-mode: forwards;
 }
 
 h1 {
-	font-size: 50px;
+    font-size: 50px;
+    animation: header1-animation 1.5s;
+    animation-fill-mode: forwards;
 }
-<<<<<<< HEAD
 
 a {
 	color: white;
 	text-decoration: underline;
 }
-=======
->>>>>>> 2c4a011c196ad46de624b05a8af23c9a6f4e86a4
+
+@keyframes header1-animation {
+    0% {
+        opacity: 0;
+        padding-top: 5vw;
+        padding-bottom: 2vw;
+    }
+
+    100% {
+        opacity: 1;
+        padding-top: 0vw;
+        padding-bottom: 0vw;
+    }
+}
+
+@keyframes header0-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

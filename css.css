@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
+@import "material-components-web/material-components-web";
 div.vice h1 {
 	font-size: 50px;
 	font-family: "Poppins", Calibri, sans-serif;
@@ -128,6 +129,7 @@ div.info p {
 p.footer {
 	color: #808080;
 	font-size: 15px;
+	display: none;
 }
 
 p.footer a {
@@ -236,11 +238,17 @@ p.ver {
 	color: white;
 	font-family: Calibri;
 	position: fixed;
-	top: 10px;
+	top: 75px;
 	right: 20px;
 	z-index: 9998;
 	padding: 10px;
 	background-color: black;
+}
+
+a.chyba {
+	position: fixed;
+	top: 20px;
+	right: 20px;
 }
 
 @media (max-width: 700px) {
@@ -305,6 +313,13 @@ a.zpet {
 	animation-delay: 0s;
 	animation-fill-mode: forwards;
 	opacity: 0;
+}
+
+a.chyba {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 9999;
 }
 
 @keyframes iframe-control-animation {

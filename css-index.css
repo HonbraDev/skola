@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
 
 body {
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 div.header {
@@ -43,10 +43,31 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-a {
-	color: white;
-	text-decoration: underline;
+a.jdemeNaTo {
+    color: white;
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: 10px;
+    text-shadow: none;
+    box-shadow: 10px 20px 50px gray;
+    margin-right: 10px;
 }
+
+a.viceInfo {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    text-shadow: none;
+    box-shadow: 10px 20px 50px gray;
+    border: 1px solid dodgerblue;
+}
+
+div.pomlcka {
+    color: white;
+    font-size: 100px;
+}
+
 
 @keyframes header1-animation {
     0% {

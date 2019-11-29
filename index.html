@@ -4,14 +4,25 @@
     <title>Mapa školy</title>
     <link rel="stylesheet" type="text/css" href="css-index.css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="main.js"></script>
 </head>
 <body>
-    <div class="header">
         <h1>Vítejte u virtuální prohlídky</h1>
         <h0>Mensa gymnázia!</h0><div class="pomlcka">-</div>
-        <a class="jdemeNaTo" href="0p.html">Přejít na web</a><a class="viceInfo" href="0p.html">Informace o projektu</a>
-    </div>
+        <a class="jdemeNaTo" onclick="start()">Spustit projekt</a><a class="viceInfo" href="0p.html">Informace o projektu</a>
+		<iframe class="panoraven" id="start" alt="Obrázek nešlo zobrazit :(" allowFullScreen="true"></iframe>
+		<button class="x" onclick="stop()" id="x">Ukončit projekt</button>
+	<div class="outer" id="jsNotice">
+		<div class="middle">
+			<div class="inner">
+				<h1>Tato aplikace potřebuje JavaScript</h1>
+				<h3>Zapněte ho, prosím.</h3>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSfN1WAsGd2f35KYxiObpxuZebDCzpMtq0jlNAXNqyrpoXOHkQ/viewform">Nahlásit chybu</a>
+			</div>
+		</div>
+	</div>
     <script>main()</script>
 </body>
 </html>

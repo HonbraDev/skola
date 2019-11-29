@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|Open+Sans|Poppins|Source+Sans+Pro&display=swap');
 
 body {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-div.header {
-    background: url("bgimage.jpg") no-repeat center center fixed;
+	background: url("bgimage.jpg") no-repeat center center fixed;
     webkit-background-size: cover;
     moz-background-size: cover;
     o-background-size: cover;
     background-size: cover;
-    margin-top: 0px;
+	margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 10vw;
@@ -24,11 +18,8 @@ div.header {
     background-position: right bottom;
     color: white;
     text-shadow: 1px 2px 3px black;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    height: 100vh;
-    width: 100vw;
+}
+div.header {
 }
 
 h0 {
@@ -53,6 +44,10 @@ a.jdemeNaTo {
     margin-right: 10px;
     animation: header0-animation 1.5s;
     animation-fill-mode: forwards;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	border: 2px solid dodgerblue;
 }
 
 a.viceInfo {
@@ -62,24 +57,83 @@ a.viceInfo {
     padding: 10px;
     text-shadow: none;
     box-shadow: 10px 20px 50px gray;
-    border: 1px solid dodgerblue;
+    border: 2px solid dodgerblue;
     animation: header0-animation 1.5s;
     animation-fill-mode: forwards;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
 
 a.viceInfo:hover {
-    background-color: aliceblue;
+    background-color: dodgerblue;
+	color: white;
+	
 }
 
 a.jdemeNaTo:hover {
-    background-color: royalblue;
+    background-color: white;
+	border: 2px solid dodgerblue;
+	color: black;
 }
 
 div.pomlcka {
     color: white;
     font-size: 100px;
+	opacity: 0;
 }
 
+p.ver {
+	color: white;
+	font-family: Calibri;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 9998;
+	padding: 10px;
+	background-color: black;
+		-webkit-transition-duration: 1s;
+	/* Safari */
+	transition-duration: 1s;
+}
+
+iframe {
+	height: 100vh;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	position: fixed;
+	top: 100vh;
+	left: 0px;
+	-webkit-transition-duration: 1s;
+	/* Safari */
+	transition-duration: 1s;
+	background-color: black;
+}
+
+button.x {
+	width: 110px;
+	height: 50px;
+	-webkit-transition-duration: 1s;
+	/* Safari */
+	transition-duration: 1s;
+	cursor: pointer;
+	border: 2px solid dodgerblue;
+	color: white;
+	background-color: dodgerblue;
+	position: fixed;
+	bottom: -60px;
+	margin-left: -55px;
+	left: 50%;
+}
+
+button.x:hover {
+    background-color: white;
+	border: 2px solid dodgerblue;
+	color: black;
+}
 
 @keyframes header1-animation {
     0% {

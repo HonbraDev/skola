@@ -51,6 +51,8 @@ a.jdemeNaTo {
     text-shadow: none;
     box-shadow: 10px 20px 50px gray;
     margin-right: 10px;
+    animation: header0-animation 1.5s;
+    animation-fill-mode: forwards;
 }
 
 a.viceInfo {
@@ -61,6 +63,16 @@ a.viceInfo {
     text-shadow: none;
     box-shadow: 10px 20px 50px gray;
     border: 1px solid dodgerblue;
+    animation: header0-animation 1.5s;
+    animation-fill-mode: forwards;
+}
+
+a.viceInfo:hover {
+    background-color: aliceblue;
+}
+
+a.jdemeNaTo:hover {
+    background-color: royalblue;
 }
 
 div.pomlcka {
@@ -90,5 +102,15 @@ div.pomlcka {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes button-animation {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: aliceblue;
     }
 }

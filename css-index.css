@@ -19,7 +19,34 @@ body {
     color: white;
     text-shadow: 1px 2px 3px black;
 }
-div.header {
+ul li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: none;
+}
+ul li:hover {
+    font-weight: bolder;
+}
+
+ul li.actual {
+    border-bottom: 4px solid dodgerblue;
+}
+
+ul {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 20px black;
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 2px;
+    top: -10vh;
+    opacity: 0;
+    animation: menu-animation 1s;
+    animation-fill-mode: forwards;
 }
 
 h0 {
@@ -44,10 +71,11 @@ a.jdemeNaTo {
     margin-right: 10px;
     animation: header0-animation 1.5s;
     animation-fill-mode: forwards;
-	-webkit-transition-duration: 0.4s;
-	/* Safari */
-	transition-duration: 0.4s;
-	border: 2px solid dodgerblue;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    border: 2px solid dodgerblue;
+    cursor: pointer;
 }
 
 a.viceInfo {
@@ -67,15 +95,12 @@ a.viceInfo {
 }
 
 a.viceInfo:hover {
-    background-color: dodgerblue;
-	color: white;
-	
+    background-color: lavender;
 }
 
 a.jdemeNaTo:hover {
-    background-color: white;
-	border: 2px solid dodgerblue;
-	color: black;
+    background-color: royalblue;
+    border: 2px solid royalblue;
 }
 
 div.pomlcka {
@@ -166,5 +191,15 @@ button.x:hover {
 
     100% {
         background-color: aliceblue;
+    }
+}
+
+@keyframes menu-animation {
+    25% {
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
     }
 }

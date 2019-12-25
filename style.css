@@ -1,0 +1,436 @@
+html {
+  background: url("bgimage.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: dodgerblue;
+  margin: none;
+  padding: none;
+  text-align: center;
+  font-family: "Poppins", Arial, Calibri, "Times New Roman";
+  color: white;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+ 
+div.top a {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-shadow: none;
+  margin: 0 auto;
+  padding: 0 10px;
+  cursor: pointer;
+  -webkit-transtion-duration: 0.4s;
+  transition-duration: 0.4;
+  text-decoration: none;
+  color: white;
+  z-index: 99999999;
+}
+div.top a:hover {
+  font-weight: bolder;
+  border-bottom: 4px solid dodgerblue;
+}
+
+div.top a.actual {
+  border-bottom: 4px solid dodgerblue;
+}
+
+div.top {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  margin-top: 0px;
+  height: 43px;
+  padding-top: 20px;
+  z-index: 100;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(61, 61, 61, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+a.jdemeNaTo {
+  color: white;
+  text-decoration: none;
+  background-color: dodgerblue;
+  padding: 10px;
+  text-shadow: none;
+  margin-right: 10px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  border: 2px solid dodgerblue;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+a.jdemeNaTo:hover {
+  background-color: white;
+  border: 2px solid dodgerblue;
+  color: black;
+}
+
+div.pomlcka {
+  color: white;
+  font-size: 100px;
+  opacity: 0;
+}
+
+iframe.start {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  z-index: 2;
+  display: none;
+}
+div.info {
+  z-index: 9;
+  position: absolute;
+  bottom: -10vh;
+  width: 100vw;
+  height: 20vh;
+  left: 0px;
+  background-color: rgba(61, 61, 61, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -webkit-transition-duration: 0.25s;
+  /* Safari */
+  transition-duration: 0.25s;
+  opacity: 0;
+}
+
+div.info p {
+  margin-top: 100px;
+  -webkit-transition-duration: 0.25s;
+  /* Safari */
+  transition-duration: 0.25s;
+  opacity: 0.5;
+}
+
+div.info:hover p {
+  opacity: 1;
+  margin-top: 10px;
+}
+
+div.info:hover {
+  bottom: 0px;
+}
+
+iframe.odjinud {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  top: 0px;
+  display: none;
+  left: 0px;
+  -webkit-transition-duration: 1s;
+  /* Safari */
+  transition-duration: 1s;
+}
+
+button.x {
+  width: 154.7px;
+  height: 50px;
+  -webkit-transition-duration: 1s;
+  /* Safari */
+  transition-duration: 1s;
+  cursor: pointer;
+  border: 2px solid dodgerblue;
+  color: white;
+  background-color: dodgerblue;
+  position: fixed;
+  bottom: -60px;
+  margin-left: -77.35px;
+  left: 50%;
+  font-size: 20px;
+}
+
+button.x:hover {
+  background-color: white;
+  border: 2px solid dodgerblue;
+  color: black;
+}
+
+button.back {
+  border: none;
+  z-index: 9999999;
+  background-color: dodgerblue;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: -100px;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  width: 80px;
+  border-radius: 50px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: 2px solid dodgerblue;
+  cursor: pointer;
+}
+
+button.back:hover {
+  background-color: white;
+  border: 2px solid dodgerblue;
+  color: black;
+}
+
+div.index-outer {
+  display: table;
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+div.index-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.index-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 15px;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(61, 61, 61, 0.5);
+  backdrop-filter: blur(10px);
+  border-top: 4px solid dodgerblue;
+  -webkit-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+div.index-inner:hover {
+  padding: 20px;
+}
+
+div.index-middle div.pododkazy {
+  backdrop-filter: blur(10px);
+  max-width: 530px;
+  margin: 0 auto;
+  color: white;
+  margin-top: 20px;
+}
+
+div.index-middle div.podtop {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+div.index-middle div.podbot {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  animation: pododkaz-animation 2s;
+}
+
+div.index-middle div.pododkazy pododkaz {
+  text-decoration: none;
+  color: white;
+  margin: 0 2.5;
+  cursor: pointer;
+  background-color: inital;
+  box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: rgba(61, 61, 61, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -ms-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  width: 45%;
+  font-size: 10px;
+  -webkit-transition-duration: 0.25s;
+  /* Safari */
+  transition-duration: 0.25s;
+}
+
+div.index-middle div.pododkazy pododkaz h1a {
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-transition-duration: 0.25s;
+  /* Safari */
+  transition-duration: 0.25s;
+}
+
+div.index-middle div.pododkazy pododkaz div {
+  margin-top: 10px;
+}
+
+div.index-middle div.pododkazy pododkaz podtitul {
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px white solid;
+  -webkit-transition-duration: 0.25s;
+  /* Safari */
+  transition-duration: 0.25s;
+}
+
+div.index-middle div.pododkazy pododkaz:first-child {
+  float: left;
+}
+
+div.index-middle div.pododkazy pododkaz:last-child {
+  float: right;
+}
+
+div.index-middle div.pododkazy pododkaz:first-child:hover {
+  margin-left: -5px;
+  margin-top: -5px;
+  padding: 5px;
+}
+
+div.index-middle div.pododkazy pododkaz:last-child:hover {
+  margin-right: -5px;
+  margin-top: -5px;
+  padding: 5px;
+}
+
+div.index-middle div.pododkazy pododkazy {
+  color: grey;
+}
+
+@media (max-width: 600px) {
+  div.index-inner {
+    box-shadow: initial;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
+    -ms-backdrop-filter: initial;
+    -o-backdrop-filter: initial;
+    -moz-backdrop-filter: initial;
+    animation: none;
+    border: none;
+  }
+  div.top {
+    box-shadow: initial;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
+    -ms-backdrop-filter: initial;
+    -o-backdrop-filter: initial;
+    -moz-backdrop-filter: initial;
+    animation: none;
+  }
+  div.index-outer {
+    background-color: rgba(61, 61, 61, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    animation: none;
+  }
+  div.index-middle div.pododkazy {
+    box-shadow: initial;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
+    -ms-backdrop-filter: initial;
+    -o-backdrop-filter: initial;
+    -moz-backdrop-filter: initial;
+    animation: none;
+  }
+  div.index-middle div.pododkazy pododkazy {
+    color: lightgrey;
+  }
+
+  div.index-middle div.pododkazy pododkazy pododkaz {
+    background-color: none;
+  }
+  div.index-middle div.pododkazy pododkaz {
+    box-shadow: initial;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: initial;
+    -webkit-backdrop-filter: initial;
+    -ms-backdrop-filter: initial;
+    -o-backdrop-filter: initial;
+    -moz-backdrop-filter: initial;
+    animation: none;
+    border: none;
+    width: 50%;
+  }
+  div.index-middle div.pododkazy pododkaz:first-child:hover {
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  div.index-middle div.pododkazy pododkaz:last-child:hover {
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+}
+
+@keyframes header1-animation {
+  0% {
+    opacity: 0;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+  }
+}
+
+@keyframes box-animation {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes box-animation {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes top-animation {
+  25% {
+    top: -75px;
+  }
+  100% {
+    top: 0px;
+  }
+}

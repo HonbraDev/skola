@@ -27,7 +27,7 @@
       "type": "image/png"
     }],
   "lang": "cs-CZ",
-  "start_url": "/index.html",
+  "start_url": "/skola/index.html",
   "display": "standalone",
   "background_color": "dodgerblue",
   "theme_color": "dodgerblue"

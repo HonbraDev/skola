@@ -5,10 +5,14 @@
     <!-- Název stránky (web) -->
     <title>Mapa školy</title>
 
-    <!-- Font -->
+    <!-- Fonty -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
     />
 
     <!-- Nastavení velikosti pro mobilní zařízení -->
@@ -18,10 +22,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <!-- Barva status baru (iOS) -->
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="dodgerblue" />
 
     <!-- Nadpis aplikace (iOS) -->
     <meta name="apple-mobile-web-app-title" content="Mapa školy" />
@@ -29,24 +30,21 @@
     <!-- Ikona (iOS) -->
     <link
       rel="apple-touch-icon"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.jpg?v=1576924471976"
+      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F3f621596-6eb5-4189-893c-28b120bf2e4a_output-onlinepngtools.jpg?v=1577997816519"
     />
 
     <!-- Ikona (web) -->
     <link
       rel="shortcut icon"
       type="image/png"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
+      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
     />
-
-    <!-- Načtení CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 
     <!-- Načtení JavaScriptu -->
     <script src="main.js" defer></script>
 
     <!-- Manifest -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="pwa.json" />
 
     <!-- Theme barva -->
     <meta name="theme-color" content="dodgerblue" />
@@ -59,84 +57,149 @@
 
     <!-- MS title barva -->
     <meta name="msapplication-TileColor" content="#1E90FF" />
+
+    <!-- Material Design -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link href="mdc.css" rel="stylesheet" />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="mdc-setup.js" defer></script>
+    <script src="modern.js" defer></script>
+    <!-- Načtení CSS -->
+    <link rel="stylesheet" type="text/css" href="modern.css" media="screen" />
   </head>
 
   <!-- BODY - viditelná část stránky -->
-  <body id="body">
-    <!-- Navbar -->
-    <div class="top" id="top">
-      <a class="actual" id="radek-home" onclick="domu()">DOMŮ</a>
-      <a href="https://www.mensagymnazium.cz/cs/skola/o-skole" id="radek-oskole"
-        >O ŠKOLE</a
-      >
-      <a onclick="location.reload();">RELOAD</a>
-    </div>
-
-    <!-- Nadpis a tlačítko (centerovaný DIV) -->
-    <div class="index-outer">
-      <div class="index-middle">
-        <div class="index-inner">
-          <!-- Nadpis -->
-          <h1>Vítejte u virtuální prohlídky Mensa gymnázia!</h1>
-
-          <!-- Mezera -->
-          <br /><br />
-
-          <!-- Tlačítko -->
-          <a onclick="start()" class="jdemeNaTo">Spustit prohlídku</a>
-          
-          <a href="https://glitch.com/edit/#!/skola" class="jdemeNaTo">Zdrojový kód</a>
-
-          <!-- Mezera -->
-          <br /><br />
-        </div>
-
-        <!-- Pododkazy -->
-        <div class="pododkazy podbot">
-          <pododkazy>
-            <!-- Kabinet učitelů -->
-            <pododkaz onclick="alert('Funkce ještě stále není dokončena.')">
-              <h1a>Učitelé</h1a><br /><podtitul>a jejich kabinety</podtitul>
-              <div>
-                Podívejte se, kde má který vyučující kabinet, abyste ho snadno
-                našli.
-              </div></pododkaz
+  <body onhashchange="hashCheck()">
+    <header class="mdc-top-app-bar navbar" id="navbar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-surface"
+            onclick="navigovat()"
+            data-mdc-ripple-is-unbounded
+          >
+            menu
+          </button>
+          <span class="mdc-top-app-bar__title">Mapa školy</span>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar--fixed"
+          role="toolbar"
+        ></section>
+      </div>
+    </header>
+    <div class="navbar-container" id="navigace">
+      <aside class="mdc-drawer navigace">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-ripple-surface" href="#" id="navigace1">
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >home</i
+              >
+              <span class="mdc-list-item__text">Domů</span>
+            </a>
+            <a
+              class="mdc-list-item mdc-ripple-surface"
+              href="#start"
+              id="navigace2"
             >
-
-            <!-- Mobilní (stabilní) stránka (GitHub host) -->
-            <pododkaz
-              onclick="location.href='https://honbraofficial.github.io/skola2/app.html'"
-              ><h1a>Verze</h1a><br /><podtitul>pro mobilní zařízení</podtitul>
-              <div>
-                Pro případ, že je tato stránka nestabilní na vašem mobilním
-                zařízení.
-              </div></pododkaz
-            ></pododkazy
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >3d_rotation</i
+              >
+              <span class="mdc-list-item__text">Mapa</span>
+            </a>
+            <hr class="mdc-list-divider" />
+            <a
+              class="mdc-list-item mdc-ripple-surface"
+              href="#"
+              id="navigace3"
+              onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUOTdISDZHSjdZNTY3NEhXU1ZMWFUzWVhWRy4u')"
+            >
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >bug_report</i
+              >
+              <span class="mdc-list-item__text">Nahlásit chybu</span>
+            </a>
+            <a
+              class="mdc-list-item mdc-ripple-surface"
+              href="#"
+              id="navigace4"
+              onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUNUdIRlFIWkQyOFAwOVlBVlpORU9TQUs4WS4u')"
+            >
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >announcement</i
+              >
+              <span class="mdc-list-item__text">Váš názor</span>
+            </a>
+            <hr class="mdc-list-divider" />
+            <a
+              class="mdc-list-item mdc-ripple-surface"
+              onclick="location.replace('/old.html')"
+            >
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >arrow_back</i
+              >
+              <span class="mdc-list-item__text">Zpět na starou verzi</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <div class="main hidden main-maxheight" id="main-home">
+      <div class="main-box">
+        <img
+          src="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
+        />
+        <div class="right">
+          <nadpis>MAPA ŠKOLY</nadpis>
+          <br />
+          <br />
+          <podnadpis
+            >Vítejte u virtuální prohlídky Mensa gymnázia!</podnadpis
+          >
+          <br /><br />
+          <podnadpis2
+            >Tento projekt používá Marzipano a Material Design od firmy
+            Google.</podnadpis2
+          >
+          <br /><br />
+          <a
+            class="mdc-button mdc-button--outlined mdc-ripple-surface"
+            href="#start"
+            >Přejít k mapě</a
           >
         </div>
       </div>
     </div>
-
-    <!-- Info (brání ve výhledu (obzvlášť na mobilu), takže zakomentováno) -->
-    <!--
-    <div class="info" id="info" onclick="fixinfo()">
-      <h1>Ahoj</h1>
-      <p id="info-p">
-        To je dobrý pozdrav.
-      </p>
-    </div>
--->
-
-    <!-- iFrame (pod obrazovkou) -->
     <iframe
-      class="start"
-      id="start"
-      src="https://honbraofficial.github.io/skola2/app.html"
+      class="start hidden"
+      id="main-start"
+      src="https://honbraofficial.github.io/skola2/app.html#0"
     ></iframe>
-
-    <!-- Tlačítko zpět -->
-    <button onclick="zpet()" class="back" id="back">
-      ← Zpět
+    <button class="mdc-fab btn-back mdc-ripple-surface" aria-label="Zpět" id="btnBack" onclick="backHome()">
+      <div class="mdc-fab__ripple"></div>
+      <span class="mdc-fab__icon material-icons">arrow_back</span>
     </button>
+    <div class="main hidden" id="main-404">
+      <p class="centertext">Chyba</p>
+      <h1 class="big lightgrey centertext">
+        404
+      </h1>
+    </div>
   </body>
 </html>

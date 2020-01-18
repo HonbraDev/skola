@@ -102,6 +102,7 @@ iframe.start {
   z-index: 2;
   display: none;
 }
+
 div.info {
   z-index: 9;
   position: absolute;
@@ -175,29 +176,11 @@ button.x:hover {
   color: black;
 }
 
-button.back {
-  border: none;
+button.zpet {
   z-index: 9999999;
-  background-color: dodgerblue;
-  height: 50px;
   position: fixed;
   bottom: 20px;
   left: -100px;
-  color: white;
-  padding: 10px;
-  font-size: 15px;
-  width: 80px;
-  border-radius: 50px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  border: 2px solid dodgerblue;
-  cursor: pointer;
-}
-
-button.back:hover {
-  background-color: white;
-  border: 2px solid dodgerblue;
-  color: black;
 }
 
 div.index-outer {
@@ -233,9 +216,9 @@ div.index-inner {
   transition-duration: 0.25s;
 }
 
-div.index-inner:hover {
+/*div.index-inner:hover {
   padding: 20px;
-}
+}*/
 
 div.index-middle div.pododkazy {
   backdrop-filter: blur(10px);
@@ -305,7 +288,7 @@ div.index-middle div.pododkazy pododkaz:last-child {
   float: right;
 }
 
-div.index-middle div.pododkazy pododkaz:first-child:hover {
+/*div.index-middle div.pododkazy pododkaz:first-child:hover {
   margin-left: -5px;
   margin-top: -5px;
   padding: 5px;
@@ -315,7 +298,7 @@ div.index-middle div.pododkazy pododkaz:last-child:hover {
   margin-right: -5px;
   margin-top: -5px;
   padding: 5px;
-}
+}*/
 
 div.index-middle div.pododkazy pododkazy {
   color: grey;
@@ -381,7 +364,7 @@ div.index-middle div.pododkazy pododkazy {
     border: none;
     width: 50%;
   }
-  div.index-middle div.pododkazy pododkaz:first-child:hover {
+  /*div.index-middle div.pododkazy pododkaz:first-child:hover {
     margin-left: 0px;
     margin-top: 0px;
     padding: 0px;
@@ -391,7 +374,7 @@ div.index-middle div.pododkazy pododkazy {
     margin-right: 0px;
     margin-top: 0px;
     padding: 0px;
-  }
+  }*/
 }
 
 @keyframes header1-animation {

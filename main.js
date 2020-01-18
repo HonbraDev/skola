@@ -2,7 +2,7 @@ window.onload = () => {
   "use strict";
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
+    navigator.serviceWorker.register("serverworker.js");
   }
 };
 
@@ -23,8 +23,9 @@ function hideInfo() {
 }
 
 function main() {
-  document.getElementById("jsNotice").style.display = "none";
-  var fixed = false;
+  document.getElementById("back").style.left = "20px";
+  document.getElementById("back").style.position = "fixed";
+  document.getElementById("back").style.zIndex = "20";
 }
 
 function oskole() {
@@ -70,4 +71,8 @@ function domu() {
   document.getElementById("oskole").style.display = "none";
   document.getElementById("radek-home").className = "actual";
   document.getElementById("radek-oskole").className = "";
+}
+
+function redir(url) {
+  location.href = url;
 }

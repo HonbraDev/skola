@@ -25,6 +25,75 @@ function hashCheck() {
   }
 }
 
+if (c == "") {
+  document.getElementById("main-start").src =
+    "https://honbraofficial.github.io/skola2/app.html#0";
+} else {
+  if (c == "00") {
+    notfound();
+  } else {
+    if (c == "01") {
+      iframehash(0);
+    } else {
+      if (c == "02") {
+        iframehash(1);
+      } else {
+        if (c == "03") {
+          notfound();
+        } else {
+          if (c == "04") {
+            notfound();
+          } else {
+            if (c == "05") {
+              iframehash(2);
+            } else {
+              if (c == "11") {
+                iframehash(3);
+              } else {
+                if (c == "12") {
+                  notfound();
+                } else {
+                  if (c == "13") {
+                    notfound();
+                  } else {
+                    if (c == "14") {
+                      notfound();
+                    } else {
+                      if (c == "21") {
+                        iframehash(5);
+                      } else {
+                        if (c == "22") {
+                          notfound();
+                        } else {
+                          if (c == "23") {
+                            iframehash(6);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function iframehash(h) {
+  document.getElementById("main-start").src =
+    "https://honbraofficial.github.io/skola2/app.html#" + h;
+}
+
+function notfound() {
+  location.hash = "404";
+}
+
+/* document.getElementById("main-start").src =
+    "https://honbraofficial.github.io/skola2/app.html#" + c; */
+
 function hashnavigation(locat, num) {
   hideAll();
   navigacevis(num);

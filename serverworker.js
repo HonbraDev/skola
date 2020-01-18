@@ -1,6 +1,6 @@
 var cacheName = "skola";
 var filesToCache = [
-  "/bgimage.jpg"
+  "bgimage.jpg"
 ];
 
 /* Start the service worker and cache all of the app's content */

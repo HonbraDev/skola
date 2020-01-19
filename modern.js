@@ -1,5 +1,7 @@
 hashCheck();
 
+document.getElementById("main-start").style.top = "100px";
+
 window.navigace = 0;
 
 console.log("test");
@@ -7,7 +9,13 @@ console.log("test");
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("c");
+var usr = url.searchParams.get("username");
 console.log(c);
+
+if (usr == null) {
+} else {
+  document.getElementById("navnadpis").innerHTML = ("Mapa školy - " + usr);
+}
 
 function hashCheck() {
   if (location.hash == "#") {
@@ -19,6 +27,9 @@ function hashCheck() {
     } else {
       if (location.hash == "#start") {
         hashnavigation("main-start", 2);
+        document.getElementById("infopruh").style.bottom = "0px";
+        document.getElementById("main-start").style.opacity = "1";
+        document.getElementById("main-start").style.top = "0px";
       } else {
         hashnavigation("main-404", 1);
       }
@@ -103,14 +114,26 @@ function hashnavigation(locat, num) {
 
 function backHome() {
   location.hash = "#";
+  backHomedve();
+  document.getElementById("main-start").style.opacity = "0";
+  setTimeout(function() {
+    document.getElementById("main-start").style.display = "none";
+  }, 400);
 }
 
 function hideAll() {
   document.getElementById("main-home").style.display = "none";
-  document.getElementById("main-start").style.display = "none";
   document.getElementById("main-404").style.display = "none";
   document.getElementById("navbar").style.top = "0px";
   document.getElementById("btnBack").style.display = "none";
+  document.getElementById("infopruh").style.bottom = "-15vh";
+}
+
+function backHomedve() {
+  document.getElementById("main-start").style.top = "-100px";
+  setTimeout(function() {
+    document.getElementById("main-start").style.top = "100px";
+  }, 400);
 }
 
 function navigacevis(num) {
@@ -154,7 +177,10 @@ function navigacevis(num) {
 function hideNavigovat() {
   if (window.navigace == 1) {
     document.getElementById("navigace").style.left = "-257px";
-    document.getElementById("navbg").style.right = "";
+    document.getElementById("navbg").style.opacity = "0";
+    setTimeout(function() {
+      document.getElementById("navbg").style.display = "none";
+    }, 400);
     window.navigace = 0;
     return;
   }
@@ -163,7 +189,8 @@ function hideNavigovat() {
 function navigovat() {
   if (window.navigace == 0) {
     document.getElementById("navigace").style.left = "0px";
-    document.getElementById("navbg").style.right = "0px";
+    document.getElementById("navbg").style.display = "inline";
+    document.getElementById("navbg").style.opacity = "1";
     window.navigace = 1;
     return;
   }

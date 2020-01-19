@@ -191,10 +191,6 @@ div.navig-bg {
   div.main {
     top: 56px;
   }
-  div.navbar-container {
-    top: 56px;
-    height: calc(100% - 56px);
-  }
   .main-maxheight {
     height: calc(100% - 96px);
   }

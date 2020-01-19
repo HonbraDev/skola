@@ -15,6 +15,7 @@ function hashCheck() {
   } else {
     if (location.hash == "") {
       hashnavigation("main-home", 1);
+      location.href = "#";
     } else {
       if (location.hash == "#start") {
         hashnavigation("main-start", 2);
@@ -153,6 +154,7 @@ function navigacevis(num) {
 function hideNavigovat() {
   if (window.navigace == 1) {
     document.getElementById("navigace").style.left = "-257px";
+    document.getElementById("navbg").style.right = "";
     window.navigace = 0;
     return;
   }
@@ -161,11 +163,13 @@ function hideNavigovat() {
 function navigovat() {
   if (window.navigace == 0) {
     document.getElementById("navigace").style.left = "0px";
+    document.getElementById("navbg").style.right = "0px";
     window.navigace = 1;
     return;
   }
   if (window.navigace == 1) {
     document.getElementById("navigace").style.left = "-257px";
+    document.getElementById("navbg").style.right = "";
     window.navigace = 0;
     return;
   }

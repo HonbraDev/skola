@@ -12,25 +12,26 @@ body {
   margin: 0px;
   padding: 0px;
   height: 100%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+  width: 15px;
 }
- 
+
 ::-webkit-scrollbar-track {
-    border-radius: 0px;
-    background-color: #cccccc;
+  border-radius: 0px;
+  background-color: #cccccc;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    background-color: dodgerblue;
+  border-radius: 0px;
+  background-color: dodgerblue;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    border-radius: 0px;
-    background-color: royalblue;
+  border-radius: 0px;
+  background-color: royalblue;
 }
 
 div.navbar-container {
@@ -58,6 +59,7 @@ header.navbar {
   position: fixed;
   top: 0px;
   left: 0px;
+  box-shadow: grey 0px 2px 20px;
 }
 
 div.main-card {
@@ -75,6 +77,9 @@ iframe.start {
   width: 100%;
   border: none;
   height: 100%;
+  opacity: 0;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 .hidden {
@@ -110,6 +115,46 @@ div.main-box podnadpis {
   line-height: 1.334;
   letter-spacing: 0em;
   padding-top: 100px;
+}
+
+infopruh {
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 30px;
+  text-align: left;
+  bottom: -15vh;
+  padding-top: 16px;
+  padding-left: 100px;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+
+info {
+  position: absolute;
+}
+
+infopruh:hover {
+  height: 10vh;
+  color: black;
+}
+
+infonadpis {
+  font-size: 20px;
+  font-weight: 200;
+  text-indent: 0.7rem;
+  letter-spacing: 0.7rem;
+  line-height: 1.167;
+  color: dodgerblue;
+  padding-right: 50px;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+
+infopruh:hover infonadpis {
+  font-size: 4rem;
 }
 
 div.main-box podnadpis2 {
@@ -171,16 +216,18 @@ div.glitchButton {
 
 .btn-back {
   position: fixed;
-  bottom: 20px;
   left: 20px;
+  bottom: 20px;
 }
 
 div.navig-bg {
   position: fixed;
   top: 0px;
-  right: 100%;
+  right: 0px;
+  opacity: 0;
+  display: none;
   height: 100%;
-  width: calc(100% - 256px);
+  width: 100%;
   z-index: 10;
   background-color: rgba(61, 61, 61, 0.5);
   transition-duration: 0.4s;

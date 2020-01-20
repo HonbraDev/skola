@@ -34,6 +34,16 @@ body {
   background-color: royalblue;
 }
 
+::selection {
+  background: dodgerblue;
+  color: white;
+}
+
+::-moz-selection {
+  background: dodgerblue;
+  color: white;
+}
+
 div.navbar-container {
   position: fixed;
   top: 0px;

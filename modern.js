@@ -1,7 +1,5 @@
 hashCheck();
 
-document.getElementById("main-start").style.top = "100px";
-
 window.navigace = 0;
 
 console.log("test");
@@ -14,7 +12,7 @@ console.log(c);
 
 if (usr == null) {
 } else {
-  document.getElementById("navnadpis").innerHTML = ("Mapa školy - " + usr);
+  document.getElementById("navnadpis").innerHTML = "Mapa školy - " + usr;
 }
 
 function hashCheck() {
@@ -27,6 +25,7 @@ function hashCheck() {
     } else {
       if (location.hash == "#start") {
         hashnavigation("main-start", 2);
+        document.getElementById("infopruh").style.display = "initial";
         document.getElementById("infopruh").style.bottom = "0px";
         document.getElementById("main-start").style.opacity = "1";
         document.getElementById("main-start").style.top = "0px";
@@ -126,7 +125,7 @@ function hideAll() {
   document.getElementById("main-404").style.display = "none";
   document.getElementById("navbar").style.top = "0px";
   document.getElementById("btnBack").style.display = "none";
-  document.getElementById("infopruh").style.bottom = "-15vh";
+  document.getElementById("infopruh").style.bottom = "-80px";
 }
 
 function backHomedve() {

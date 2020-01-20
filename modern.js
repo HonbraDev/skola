@@ -175,7 +175,7 @@ function navigacevis(num) {
 
 function hideNavigovat() {
   if (window.navigace == 1) {
-    document.getElementById("navigace").style.left = "-257px";
+    document.getElementById("navigace").style.left = "-270px";
     document.getElementById("navbg").style.opacity = "0";
     setTimeout(function() {
       document.getElementById("navbg").style.display = "none";
@@ -194,7 +194,7 @@ function navigovat() {
     return;
   }
   if (window.navigace == 1) {
-    document.getElementById("navigace").style.left = "-257px";
+    document.getElementById("navigace").style.left = "-270px";
     document.getElementById("navbg").style.right = "";
     window.navigace = 0;
     return;

@@ -47,13 +47,14 @@ body {
 div.navbar-container {
   position: fixed;
   top: 0px;
-  left: -257px;
+  left: -270px;
   height: 100%;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
   width: 256px;
   background-color: white;
   z-index: 11;
+  box-shadow: grey 0px 2px 20px;
 }
 
 div.main {

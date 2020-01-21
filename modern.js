@@ -125,7 +125,7 @@ function hideAll() {
   document.getElementById("main-404").style.display = "none";
   document.getElementById("navbar").style.top = "0px";
   document.getElementById("btnBack").style.display = "none";
-  document.getElementById("infopruh").style.bottom = "-80px";
+  document.getElementById("infopruh").style.bottom = "-200px";
 }
 
 function backHomedve() {

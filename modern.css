@@ -138,13 +138,15 @@ infopruh {
   text-align: left;
   bottom: -80px;
   padding-top: 16px;
-  padding-left: 100px;
   transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
 }
 
 info {
   position: absolute;
+  left: 480px;
+  top: 16px;
+  width: calc(100% - 480px);
 }
 
 infopruh:hover {
@@ -159,13 +161,49 @@ infonadpis {
   letter-spacing: 0.7rem;
   line-height: 1.167;
   color: dodgerblue;
-  padding-right: 50px;
+  position: absolute;
+  left: 100px;
+  top: 16px;
   transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
 }
 
 infopruh:hover infonadpis {
   font-size: 4rem;
+}
+
+.btn-back {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+@media (max-width: 500px) {
+  infonadpis {
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+  }
+  infopruh {
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+  }
+  infopruh:hover infonadpis {
+    font-size: 30px;
+    left: 5px;
+  }
+  infopruh:hover {
+    height: 200px;
+  }
+  infopruh:hover .btn-back {
+    bottom: 220px;
+  }
+  info {
+    top: 50px;
+    left: 16px;
+    width: calc(100% - 32px);
+  }
 }
 
 div.main-box podnadpis2 {
@@ -223,12 +261,6 @@ div.glitchButton {
   border-radius: 0px;
   margin: 0px;
   padding: 2px 16px;
-}
-
-.btn-back {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
 }
 
 div.navig-bg {

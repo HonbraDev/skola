@@ -188,6 +188,7 @@ function hideNavigovat() {
 function navigovat() {
   if (window.navigace == 0) {
     document.getElementById("navigace").style.left = "0px";
+    document.getElementById("navigaceIn").style.opacity = "1";
     document.getElementById("navbg").style.display = "inline";
     document.getElementById("navbg").style.opacity = "1";
     window.navigace = 1;
@@ -195,6 +196,7 @@ function navigovat() {
   }
   if (window.navigace == 1) {
     document.getElementById("navigace").style.left = "-270px";
+    document.getElementById("navigaceIn").style.opacity = "0";
     document.getElementById("navbg").style.right = "";
     window.navigace = 0;
     return;

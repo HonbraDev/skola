@@ -138,19 +138,22 @@ infopruh {
   text-align: left;
   bottom: -80px;
   padding-top: 16px;
-  transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 info {
   position: absolute;
-  left: 480px;
-  top: 16px;
-  width: calc(100% - 480px);
+  top: 65px;
+  left: 16px;
+  width: calc(100% - 32px);
+  text-align: center;
+  max-heigth: 135px;
+  overflow: hidden;
 }
 
 infopruh:hover {
-  height: 80px;
+  height: 200px;
   color: black;
 }
 
@@ -162,14 +165,18 @@ infonadpis {
   line-height: 1.167;
   color: dodgerblue;
   position: absolute;
-  left: 100px;
+  left: 0px;
   top: 16px;
-  transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 infopruh:hover infonadpis {
-  font-size: 4rem;
+  font-size: 30px;
+  opacity: 1;
 }
 
 .btn-back {
@@ -180,30 +187,8 @@ infopruh:hover infonadpis {
   -webkit-transition-duration: 0.4s;
 }
 
-@media (max-width: 500px) {
-  infonadpis {
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-  }
-  infopruh {
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-  }
-  infopruh:hover infonadpis {
-    font-size: 30px;
-    left: 5px;
-  }
-  infopruh:hover {
-    height: 200px;
-  }
-  infopruh:hover .btn-back {
-    bottom: 220px;
-  }
-  info {
-    top: 50px;
-    left: 16px;
-    width: calc(100% - 32px);
-  }
+infopruh:hover .btn-back {
+  bottom: 190px;
 }
 
 div.main-box podnadpis2 {

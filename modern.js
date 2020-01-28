@@ -166,7 +166,7 @@ function navigacevis(num) {
         .classList.remove("mdc-list-item--activated");
       hideNavigovat();
       document.getElementById("btnBack").style.display = "initial";
-      document.getElementById("navbar").style.top = "-64px";
+      document.getElementById("navbar").style.top = "-100px";
     } else {
       404();
     }

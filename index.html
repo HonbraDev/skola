@@ -73,7 +73,10 @@
 
   <!-- BODY - viditelná část stránky -->
   <body onhashchange="hashCheck()">
-    <header class="mdc-top-app-bar navbar" id="navbar">
+    <header
+      class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item mdc-top-app-bar--short-collapsed navbar"
+      id="navbar"
+    >
       <div class="mdc-top-app-bar__row">
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
@@ -85,7 +88,12 @@
           >
             menu
           </button>
-          <span class="mdc-top-app-bar__title" id="navnadpis">Mapa školy</span>
+          <button
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-surface"
+            data-mdc-ripple-is-unbounded
+          >
+            info
+          </button>
         </section>
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar--fixed"
@@ -149,40 +157,26 @@
               <span class="mdc-list-item__text">Váš názor</span>
             </a>
             <hr class="mdc-list-divider" />
-            <a class="mdc-list-item mdc-ripple-surface" href="old.html">
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >arrow_back</i
-              >
-              <span class="mdc-list-item__text">Zpět na starou verzi</span>
-            </a>
           </nav>
         </div>
       </aside>
     </div>
     <div class="main hidden main-maxheight" id="main-home">
       <div class="main-box">
-        <img
-          src="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
-        />
-        <div class="right">
-          <nadpis>MAPA ŠKOLY</nadpis>
-          <br />
-          <br />
-          <podnadpis>Vítejte u virtuální prohlídky Mensa gymnázia!</podnadpis>
-          <br /><br />
-          <podnadpis2
-            >Tento projekt používá Marzipano a Material Design od firmy
-            Google.</podnadpis2
-          >
-          <br /><br />
-          <a
-            class="mdc-button mdc-button--outlined mdc-ripple-surface"
-            href="#start"
-            >Přejít k mapě</a
-          >
-        </div>
+        <nadpis>MAPA ŠKOLY</nadpis>
+        <br />
+        <br />
+        <podnadpis>Vítejte u virtuální prohlídky Mensa gymnázia!</podnadpis>
+        <br /><br />
+        <podnadpis2
+          ><a href="http://mensagymnazium.cz">mensagymnazium.cz</a></podnadpis2
+        >
+        <br /><br />
+        <a
+          class="mdc-button mdc-button--outlined mdc-ripple-surface"
+          href="#start"
+          >Přejít k mapě</a
+        >
       </div>
     </div>
     <div class="navig-bg" onclick="hideNavigovat()" id="navbg"></div>
@@ -191,8 +185,7 @@
       id="main-start"
       src="https://honbraofficial.github.io/skola2/app.html#0"
     ></iframe>
-    <infopruh id="infopruh">
-      <div class="btn-back">
+    <div class="btn-back">
       <button
         class="mdc-fab mdc-ripple-surface btn-back-inner"
         aria-label="Zpět"
@@ -202,13 +195,7 @@
         <div class="mdc-fab__ripple"></div>
         <span class="mdc-fab__icon material-icons">home</span>
       </button>
-      </div>
-      <infonadpis>PŘÍZEMÍ</infonadpis><info>
-      <b>Zatím je v tom pruhu pořád stejný text nezávisle na aktuální scéně.</b><br>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed elit dui, pellentesque a, faucibus vel, 
-      interdum nec, diam. Nam sed tellus id magna elementum tincidunt. Aliquam erat volutpat. Maecenas lorem. Sed elit dui,
-      pellentesque a, faucibus vel, interdum nec, diam. Nullam at arcu a est sollicitudin euismod.</info></infopruh>
-
+    </div>
     <div class="main hidden" id="main-404">
       <p class="centertext">Chyba</p>
       <h1 class="big lightgrey centertext">

@@ -1,17 +1,30 @@
 https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=
 
-[0] Před školou - ?c=00
-[#] Přízemí - ?c=01
-[#] Přízemí, vlevo - ?c=02
-[0] Přízemí, vpravo - ?c=03
-[0] Přízemí, botárna - ?c=04
-[#] Přízemí, jídelna - ?c=05
+Před školou - ?c=00
+Přízemí - ?c=01
+Přízemí, vlevo - ?c=02
+Přízemí, vpravo - ?c=03
+Přízemí, botárna - ?c=04
+Přízemí, jídelna - ?c=05
 
-[#] 1. patro - ?c=11
-[0] 1. patro, vlevo - ?c=12
-[0] 1. patro, vpravo - ?c=13
-[0] 1. patro, vpravo (před ředitelnou) - ?c=1
+1. patro - ?c=11
+1. patro, vlevo - ?c=12
+1. patro, vpravo - ?c=13
 
-[#] 2. patro - ?c=21
-[0] 2. patro, vlevo - ?c=22
-[0] 2. patro, vpravo - ?c=23
+2. patro - ?c=21
+2. patro, vlevo - ?c=22
+2. patro, vpravo - ?c=23
+
+0 Přízemí
+1 Přízemí, vlevo
+2 Přízemí, vpravo
+3 Přízemí, botárna
+4 Přízemí, jídelna
+
+5 1. patro
+6 1. patro, vlevo
+7 1. patro, vpravo
+
+8 2. patro
+9 2. patro, vlevo
+10 2. patro, vpravo

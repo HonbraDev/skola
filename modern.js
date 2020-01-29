@@ -48,35 +48,31 @@ if (c == "") {
         iframehash(1);
       } else {
         if (c == "03") {
-          notfound();
+          iframehash(2);
         } else {
           if (c == "04") {
-            notfound();
+            iframehash(3);
           } else {
             if (c == "05") {
-              iframehash(2);
+              iframehash(4);
             } else {
               if (c == "11") {
-                iframehash(3);
+                iframehash(5);
               } else {
                 if (c == "12") {
-                  notfound();
+                  iframehash(6);
                 } else {
                   if (c == "13") {
-                    notfound();
+                    iframehash(7);
                   } else {
-                    if (c == "14") {
-                      notfound();
+                    if (c == "21") {
+                      iframehash(8);
                     } else {
-                      if (c == "21") {
-                        iframehash(5);
+                      if (c == "22") {
+                        iframehash(9);
                       } else {
-                        if (c == "22") {
-                          notfound();
-                        } else {
-                          if (c == "23") {
-                            iframehash(10);
-                          }
+                        if (c == "23") {
+                          iframehash(10);
                         }
                       }
                     }

@@ -111,7 +111,7 @@ div.main-box {
   transform: translate(-50%, -50%);
   padding: 35px;
   background-color: rgba(61, 61, 61, 0.5);
-  width: calc(100% - 70px);
+  width: calc(100% - 70px); /* Matěji opovaž se toto změnit už jsi to jednou rozbil! */
   text-align: center;
   max-width: 500px;
 }
@@ -139,14 +139,6 @@ div.main-box podnadpis {
   letter-spacing: 0em;
   padding-top: 100px;
   color: white;
-}
-
-div.main-box div.right {
-  width: calc(100% - 40px);
-  margin: 0px;
-  margin-left: 0px;
-  text-align: center;
-  padding: 0px 20px;
 }
 
 infopruh {
@@ -212,9 +204,9 @@ infopruh:hover .btn-back {
   bottom: 190px;
 }
 
-div.main-box podnadpis2 {
-  font-size: 1.1rem;
+div.main-box podnadpis2 {;
   font-weight: 400;
+  font-size: 1.1rem
   line-height: 1.334;
   letter-spacing: 0em;
   color: rgb(127.5, 127.5, 127.5);
@@ -233,21 +225,6 @@ div.main-box podnadpis2:hover a {
 div.main-box .mdc-button {
   color: white;
   border-color: white;
-}
-
-div.main-box div.right {
-  width: 612px;
-  margin: 0px;
-  float: left;
-  color: dodgerblue;
-  margin-left: 30px;
-}
-
-div.main-box img {
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin: 2px 0px;
 }
 
 .main-maxheight {
@@ -304,24 +281,5 @@ div.navig-bg {
   }
   .main-maxheight {
     height: calc(100% - 96px);
-  }
-}
-
-@media (max-width: 850px) {
-  div.main-box img {
-    height: 120px;
-    width: 120px;
-    display: none;
-  }
-  div.main-box div.right {
-    width: calc(100% - 40px);
-    margin: 0px;
-    margin-left: 0px;
-    text-align: center;
-    padding: 0px 20px;
-  }
-  div.main-box {
-    width: 100%;
-    text-align: center;
   }
 }

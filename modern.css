@@ -111,7 +111,7 @@ div.main-box {
   transform: translate(-50%, -50%);
   padding: 35px;
   background-color: rgba(61, 61, 61, 0.5);
-  width: 100%;
+  width: calc(100% - 70px);
   text-align: center;
   max-width: 500px;
 }

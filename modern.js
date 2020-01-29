@@ -75,7 +75,7 @@ if (c == "") {
                           notfound();
                         } else {
                           if (c == "23") {
-                            iframehash(6);
+                            iframehash(10);
                           }
                         }
                       }

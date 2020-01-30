@@ -11,8 +11,13 @@ var usr = url.searchParams.get("username");
 console.log(c);
 
 if (usr == null) {
+  if (document.cookie == null) {
+  } else {
+    document.getElementById("navnadpis").innerHTML = document.cookie;
+  }
 } else {
-  document.getElementById("navnadpis").innerHTML = "Mapa školy - " + usr;
+  document.getElementById("navnadpis").innerHTML = usr;
+  document.cookie = usr;
 }
 
 function hashCheck() {

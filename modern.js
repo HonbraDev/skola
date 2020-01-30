@@ -28,7 +28,23 @@ function hashCheck() {
         document.getElementById("main-start").style.opacity = "1";
         document.getElementById("main-start").style.top = "0px";
       } else {
-        hashnavigation("main-404", 1);
+        if (location.hash == "#info") {
+          hashnavigation("main-info", 3);
+          document.getElementById("navbar").style.top = "0px";
+          document.getElementById("navbar").style.backgroundColor =
+            "rgb(61, 61, 61)";
+          document
+            .getElementById("navbar")
+            .classList.remove("mdc-top-app-bar--short-collapsed");
+          document
+            .getElementById("navbar")
+            .classList.remove("mdc-top-app-bar--short");
+          document
+            .getElementById("navbar")
+            .classList.remove("mdc-top-app-bar--short-has-action-item");
+        } else {
+          hashnavigation("main-404", 1);
+        }
       }
     }
   }
@@ -119,6 +135,16 @@ function hideAll() {
   document.getElementById("main-404").style.display = "none";
   document.getElementById("navbar").style.top = "0px";
   document.getElementById("btnBack").style.display = "none";
+  document.getElementById("main-info").style.display = "none";
+  document
+    .getElementById("navbar")
+    .classList.add("mdc-top-app-bar--short-collapsed");
+  document.getElementById("navbar").classList.add("mdc-top-app-bar--short");
+  document
+    .getElementById("navbar")
+    .classList.add("mdc-top-app-bar--short-has-action-item");
+  document.getElementById("navbar").style.backgroundColor =
+    "rgba(61, 61, 61, 0.5)";
 }
 
 function backHomedve() {
@@ -161,7 +187,25 @@ function navigacevis(num) {
       document.getElementById("btnBack").style.display = "initial";
       document.getElementById("navbar").style.top = "-100px";
     } else {
-      404();
+      if (num == 3) {
+        document
+          .getElementById("navigace2")
+          .classList.remove("mdc-list-item--activated");
+        document
+          .getElementById("navigace1")
+          .classList.remove("mdc-list-item--activated");
+        document
+          .getElementById("navigace3")
+          .classList.add("mdc-list-item--activated");
+        document
+          .getElementById("navigace4")
+          .classList.remove("mdc-list-item--activated");
+        hideNavigovat();
+        document.getElementById("btnBack").style.display = "initial";
+        document.getElementById("navbar").style.top = "-100px";
+      } else {
+        404();
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@import "my-theme.css"; 
+
 html {
   margin: 0px;
   padding: 0px;
@@ -19,6 +21,15 @@ body {
   padding: 0px;
   height: 100%;
   overflow: hidden;
+}
+
+.youtube {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {
@@ -78,6 +89,7 @@ header.navbar {
   left: 0px;
   box-shadow: grey 0px 2px 20px;
   background-color: rgba(61, 61, 61, 0.5);
+  z-index: 8;
 }
 
 div.main-card {

@@ -244,3 +244,12 @@ function navigovat() {
     return;
   }
 }
+
+function vymazCookies() {
+  if (confirm("Smazat cookies?")) {
+    document.cookie = "";
+   alert("Cookies smazány!");
+} else {
+alert("Cookies nesmazány!");
+}
+}

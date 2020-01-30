@@ -63,7 +63,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link href="mdc.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css"
+    />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="mdc-setup.js" defer></script>
     <script src="modern.js" defer></script>
@@ -91,6 +94,7 @@
           <button
             class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-surface"
             data-mdc-ripple-is-unbounded
+            onclick="location.hash = '#info';"
           >
             info
           </button>
@@ -129,11 +133,23 @@
               >
               <span class="mdc-list-item__text">Mapa</span>
             </a>
+            <a
+              class="mdc-list-item mdc-ripple-surface"
+              href="#info"
+              id="navigace3"
+            >
+              <i
+                class="material-icons mdc-list-item__graphic"
+                aria-hidden="true"
+                >info</i
+              >
+              <span class="mdc-list-item__text">Info</span>
+            </a>
             <hr class="mdc-list-divider" />
             <a
               class="mdc-list-item mdc-ripple-surface"
               href="#"
-              id="navigace3"
+              id="navigace4"
               onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUOTdISDZHSjdZNTY3NEhXU1ZMWFUzWVhWRy4u')"
             >
               <i
@@ -146,7 +162,7 @@
             <a
               class="mdc-list-item mdc-ripple-surface"
               href="#"
-              id="navigace4"
+              id="navigace5"
               onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUNUdIRlFIWkQyOFAwOVlBVlpORU9TQUs4WS4u')"
             >
               <i
@@ -201,6 +217,15 @@
       <h1 class="big lightgrey centertext">
         404
       </h1>
+    </div>
+    <div class="main hidden main-maxheight" id="main-info">
+      <iframe
+        class="youtube"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   </body>
 </html>

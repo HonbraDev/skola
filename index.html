@@ -85,14 +85,14 @@
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
         >
           <button
-            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-surface"
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button hbripple"
             onclick="navigovat()"
             data-mdc-ripple-is-unbounded
           >
             menu
           </button>
           <button
-            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-ripple-surface"
+            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button hbripple"
             data-mdc-ripple-is-unbounded
             onclick="location.hash = '#info';"
           >
@@ -109,11 +109,11 @@
       <aside class="mdc-drawer navigace" id="navigaceIn">
         <div class="mdc-drawer__header">
           <h3 class="mdc-drawer__title">Mapa školy</h3>
-          <h6 class="mdc-drawer__subtitle">Honbra a Anonym</h6>
+          <h6 class="mdc-drawer__subtitle" id="navnadpis">Nepřihlášen</h6>
         </div>
         <div class="mdc-drawer__content">
           <nav class="mdc-list">
-            <a class="mdc-list-item mdc-ripple-surface" href="#" id="navigace1">
+            <a class="mdc-list-item hbripple" href="#" id="navigace1">
               <i
                 class="material-icons mdc-list-item__graphic"
                 aria-hidden="true"
@@ -122,7 +122,7 @@
               <span class="mdc-list-item__text">Domů</span>
             </a>
             <a
-              class="mdc-list-item mdc-ripple-surface"
+              class="mdc-list-item hbripple"
               href="#start"
               id="navigace2"
             >
@@ -134,7 +134,7 @@
               <span class="mdc-list-item__text">Mapa</span>
             </a>
             <a
-              class="mdc-list-item mdc-ripple-surface"
+              class="mdc-list-item hbripple"
               href="#info"
               id="navigace3"
             >
@@ -147,7 +147,7 @@
             </a>
             <hr class="mdc-list-divider" />
             <a
-              class="mdc-list-item mdc-ripple-surface"
+              class="mdc-list-item hbripple"
               href="#"
               id="navigace4"
               onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUOTdISDZHSjdZNTY3NEhXU1ZMWFUzWVhWRy4u')"
@@ -160,7 +160,7 @@
               <span class="mdc-list-item__text">Nahlásit chybu</span>
             </a>
             <a
-              class="mdc-list-item mdc-ripple-surface"
+              class="mdc-list-item hbripple"
               href="#"
               id="navigace5"
               onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUNUdIRlFIWkQyOFAwOVlBVlpORU9TQUs4WS4u')"
@@ -189,7 +189,7 @@
         >
         <br /><br />
         <a
-          class="mdc-button mdc-button--outlined mdc-ripple-surface"
+          class="mdc-button mdc-button--outlined hbripple"
           href="#start"
           >Přejít k mapě</a
         >
@@ -203,7 +203,7 @@
     ></iframe>
     <div class="btn-back">
       <button
-        class="mdc-fab mdc-ripple-surface btn-back-inner"
+        class="mdc-fab hbripple btn-back-inner"
         aria-label="Zpět"
         id="btnBack"
         onclick="backHome()"

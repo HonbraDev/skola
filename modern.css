@@ -263,7 +263,7 @@ div.glitchButton {
   border-radius: 5px;
 }
 
-.mdc-list {
+/* .mdc-list {
   padding: 0px;
 }
 
@@ -271,7 +271,7 @@ div.glitchButton {
   border-radius: 0px;
   margin: 0px;
   padding: 2px 16px;
-}
+} */
 
 div.navig-bg {
   position: fixed;

@@ -234,10 +234,10 @@ div.main-box podnadpis2:hover a {
   text-decoration: underline;
 }
 
-div.main-box .mdc-button {
+/* div.main-box .mdc-button {
   color: white;
   border-color: white;
-}
+} */
 
 .main-maxheight {
   height: calc(100% - 104px);

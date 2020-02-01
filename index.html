@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html id="html">
-  <!-- HEAD - nastavení stránky -->
   <head>
-    <!-- Název stránky (web) -->
     <title>Mapa školy</title>
-
-    <!-- Fonty -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
@@ -14,51 +10,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
     />
-
-    <!-- Nastavení velikosti pro mobilní zařízení -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Uložitelná webová aplikace (iOS) -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <!-- Barva status baru (iOS) -->
     <meta name="apple-mobile-web-app-status-bar-style" content="dodgerblue" />
-
-    <!-- Nadpis aplikace (iOS) -->
     <meta name="apple-mobile-web-app-title" content="Mapa školy" />
-
-    <!-- Ikona (iOS) -->
     <link
       rel="apple-touch-icon"
       href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F3f621596-6eb5-4189-893c-28b120bf2e4a_output-onlinepngtools.jpg?v=1577997816519"
     />
-
-    <!-- Ikona (web) -->
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
     />
-
-    <!-- Načtení JavaScriptu -->
     <script src="main.js" defer></script>
-
-    <!-- Manifest -->
     <link rel="manifest" href="pwa.json" />
-
-    <!-- Theme barva -->
     <meta name="theme-color" content="dodgerblue" />
-
-    <!-- MS ikona -->
     <meta
       name="msapplication-TileImage"
       content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
     />
-
-    <!-- MS title barva -->
     <meta name="msapplication-TileColor" content="#1E90FF" />
-
-    <!-- Material Design -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -70,11 +42,8 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="mdc-setup.js" defer></script>
     <script src="modern.js" defer></script>
-    <!-- Načtení CSS -->
     <link rel="stylesheet" type="text/css" href="modern.css" media="screen" />
   </head>
-
-  <!-- BODY - viditelná část stránky -->
   <body onhashchange="hashCheck()">
     <header
       class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item mdc-top-app-bar--short-collapsed navbar"
@@ -109,7 +78,7 @@
       <aside class="mdc-drawer navigace" id="navigaceIn">
         <div class="mdc-drawer__header">
           <h3 class="mdc-drawer__title">Mapa školy</h3>
-          <h6 class="mdc-drawer__subtitle" id="navnadpis">Nepřihlášen</h6>
+          <h6 class="mdc-drawer__subtitle" id="navnadpis">Honbra a Akronym</h6>
         </div>
         <div class="mdc-drawer__content">
           <nav class="mdc-list">
@@ -121,11 +90,7 @@
               >
               <span class="mdc-list-item__text">Domů</span>
             </a>
-            <a
-              class="mdc-list-item hbripple"
-              href="#start"
-              id="navigace2"
-            >
+            <a class="mdc-list-item hbripple" href="#start" id="navigace2">
               <i
                 class="material-icons mdc-list-item__graphic"
                 aria-hidden="true"
@@ -133,11 +98,7 @@
               >
               <span class="mdc-list-item__text">Mapa</span>
             </a>
-            <a
-              class="mdc-list-item hbripple"
-              href="#info"
-              id="navigace3"
-            >
+            <a class="mdc-list-item hbripple" href="#info" id="navigace3">
               <i
                 class="material-icons mdc-list-item__graphic"
                 aria-hidden="true"
@@ -173,7 +134,11 @@
               <span class="mdc-list-item__text">Váš názor</span>
             </a>
             <hr class="mdc-list-divider" />
-            <a class="mdc-list-item hbripple" onclick="vymazCookies()" id="navigace9">
+            <a
+              class="mdc-list-item hbripple"
+              onclick="vymazCookies()"
+              id="navigace9"
+            >
               <i
                 class="material-icons mdc-list-item__graphic"
                 aria-hidden="true"
@@ -187,8 +152,7 @@
     </div>
     <div class="main hidden main-maxheight" id="main-home">
       <div class="main-box">
-        <nadpis>MAPA ŠKOLY</nadpis>
-        <br />
+        <nadpis>MAPA ŠKOLY</nadpis> <br />
         <br />
         <podnadpis>Vítejte u virtuální prohlídky Mensa gymnázia!</podnadpis>
         <br /><br />
@@ -196,9 +160,7 @@
           ><a href="http://mensagymnazium.cz">mensagymnazium.cz</a></podnadpis2
         >
         <br /><br />
-        <a
-          class="mdc-button mdc-button--outlined hbripple"
-          href="#start"
+        <a class="mdc-button hbripple" href="#start"
           >Přejít k mapě</a
         >
       </div>
@@ -222,9 +184,7 @@
     </div>
     <div class="main hidden" id="main-404">
       <p class="centertext">Chyba</p>
-      <h1 class="big lightgrey centertext">
-        404
-      </h1>
+      <h1 class="big lightgrey centertext">404</h1>
     </div>
     <div class="main hidden main-maxheight" id="main-info">
       <iframe

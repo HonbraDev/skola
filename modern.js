@@ -10,15 +10,6 @@ var c = url.searchParams.get("c");
 var usr = url.searchParams.get("username");
 console.log(c);
 
-  document.getElementById("navnadpis").innerHTML = usr;
-  document.cookie = usr;
-
-  if (document.cookie == null) {
-    document.getElementById("navnadpis").innerHTML = "Nepřihlášen";
-  } else {
-    document.getElementById("navnadpis").innerHTML = document.cookie;
-  }
-
 function hashCheck() {
   if (location.hash == "#") {
     hashnavigation("main-home", 1);

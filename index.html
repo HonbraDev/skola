@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html id="html">
+<html>
   <head>
     <title>Mapa školy</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
-    />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="dodgerblue" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#212bf3" />
     <meta name="apple-mobile-web-app-title" content="Mapa školy" />
     <link
       rel="apple-touch-icon"
@@ -23,177 +25,149 @@
       type="image/png"
       href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
     />
-    <script src="main.js" defer></script>
-    <link rel="manifest" href="pwa.json" />
-    <meta name="theme-color" content="dodgerblue" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
-    />
-    <meta name="msapplication-TileColor" content="#1E90FF" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css"
-    />
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script src="mdc-setup.js" defer></script>
-    <script src="modern.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="modern.css" media="screen" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
+    </script>
   </head>
-  <body onhashchange="hashCheck()">
+  <body class="mdc-typography" id="top">
+    <div class="area" id="bg">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <header
-      class="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item mdc-top-app-bar--short-collapsed navbar"
-      id="navbar"
+      class=" mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed mdc-elevation--z5"
     >
       <div class="mdc-top-app-bar__row">
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        ></section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
         >
           <button
-            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button hbripple"
-            onclick="navigovat()"
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded mdc-ripple-surface"
             data-mdc-ripple-is-unbounded
+            aria-label="Tmavý režim"
+            onclick="darkmode()"
+            id="darkbtn"
           >
-            menu
+            brightness_medium
           </button>
           <button
-            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button hbripple"
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded mdc-ripple-surface"
             data-mdc-ripple-is-unbounded
-            onclick="location.hash = '#info';"
+            aria-label="Tmavý režim"
+            onclick="lightmode()"
+            id="lightbtn"
+            style="display: none;"
           >
-            info
+            brightness_high
           </button>
         </section>
-        <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar--fixed"
-          role="toolbar"
-        ></section>
       </div>
     </header>
-    <div class="navbar-container" id="navigace">
-      <aside class="mdc-drawer navigace" id="navigaceIn">
-        <div class="mdc-drawer__header">
-          <h3 class="mdc-drawer__title">Mapa školy</h3>
-          <h6 class="mdc-drawer__subtitle" id="navnadpis">Honbra a Akronym</h6>
-        </div>
-        <div class="mdc-drawer__content">
-          <nav class="mdc-list">
-            <a class="mdc-list-item hbripple" href="#" id="navigace1">
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >home</i
-              >
-              <span class="mdc-list-item__text">Domů</span>
-            </a>
-            <a class="mdc-list-item hbripple" href="#start" id="navigace2">
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >3d_rotation</i
-              >
-              <span class="mdc-list-item__text">Mapa</span>
-            </a>
-            <a class="mdc-list-item hbripple" href="#info" id="navigace3">
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >info</i
-              >
-              <span class="mdc-list-item__text">Info</span>
-            </a>
-            <hr class="mdc-list-divider" />
-            <a
-              class="mdc-list-item hbripple"
-              href="#"
-              id="navigace4"
-              onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUOTdISDZHSjdZNTY3NEhXU1ZMWFUzWVhWRy4u')"
-            >
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >bug_report</i
-              >
-              <span class="mdc-list-item__text">Nahlásit chybu</span>
-            </a>
-            <a
-              class="mdc-list-item hbripple"
-              href="#"
-              id="navigace5"
-              onclick="redir('https://forms.office.com/Pages/ResponsePage.aspx?id=-qxPvKRscUeqBjvOBBhwHB00HINs03FAsCt14YmUEtVUNUdIRlFIWkQyOFAwOVlBVlpORU9TQUs4WS4u')"
-            >
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >announcement</i
-              >
-              <span class="mdc-list-item__text">Váš názor</span>
-            </a>
-            <hr class="mdc-list-divider" />
-            <a
-              class="mdc-list-item hbripple"
-              onclick="vymazCookies()"
-              id="navigace9"
-            >
-              <i
-                class="material-icons mdc-list-item__graphic"
-                aria-hidden="true"
-                >delete</i
-              >
-              <span class="mdc-list-item__text">Vymazat cookies</span>
-            </a>
-          </nav>
-        </div>
-      </aside>
+    <div class="main-box">
+      <h1 class="mdc-typography--headline3">MAPA ŠKOLY</h1>
+      <h2 class="mdc-typography--headline5">
+        Vítejte u virtuální prohlídky Mensa gymnázia!
+      </h2>
+      <a class="mdc-button mdc-ripple-surface" href="#code">Zdrojový kód</a>
+      <a class="mdc-button mdc-ripple-surface" href="#start">Přejít k mapě</a>
     </div>
-    <div class="main hidden main-maxheight" id="main-home">
-      <div class="main-box">
-        <nadpis>MAPA ŠKOLY</nadpis> <br />
-        <br />
-        <podnadpis>Vítejte u virtuální prohlídky Mensa gymnázia!</podnadpis>
-        <br /><br />
-        <podnadpis2
-          ><a href="http://mensagymnazium.cz">mensagymnazium.cz</a></podnadpis2
-        >
-        <br /><br />
-        <a class="mdc-button hbripple" href="#start"
-          >Přejít k mapě</a
-        >
-      </div>
+    <div class="box-container"></div>
+    <div class="article" id="oprojektu">
+      <h1 class="mdc-typography--headline2">O projektu</h1>
+      <p class="mdc-typography--body1">
+        Myslíme si, že to nemusíme vysvětlovat. Mapujeme chodby (a třídy) Mensa
+        Gymnázia a pak je dáváme na web.
+      </p>
     </div>
-    <div class="navig-bg" onclick="hideNavigovat()" id="navbg"></div>
-    <iframe
-      class="start hidden"
-      id="main-start"
-      src="https://honbraofficial.github.io/skola2/app.html#0"
-    ></iframe>
-    <div class="btn-back">
-      <button
-        class="mdc-fab hbripple btn-back-inner"
-        aria-label="Zpět"
-        id="btnBack"
-        onclick="backHome()"
+
+    <div class="article iframe" id="start">
+      <h1 class="mdc-typography--headline2" id="iframeText">Mapa</h1>
+      <iframe
+        src="https://honbraofficial.github.io/skola2/app.html#0"
+        id="iFrame"
+        class="mdc-elevation--z2"
       >
-        <div class="mdc-fab__ripple"></div>
-        <span class="mdc-fab__icon material-icons">home</span>
+      </iframe>
+
+      <button
+        class="mdc-fab mdc-ripple-surface full"
+        aria-label="Celá obrazovka"
+        id="fullscreen"
+        onclick="fullscreen()"
+      >
+        <span class="mdc-fab__icon material-icons">fullscreen</span>
+      </button>
+
+      <button
+        class="mdc-fab mdc-ripple-surface exit"
+        aria-label="Celá obrazovka"
+        id="exitfull"
+        onclick="exitfull()"
+      >
+        <span class="mdc-fab__icon material-icons">fullscreen_exit</span>
       </button>
     </div>
-    <div class="main hidden" id="main-404">
-      <p class="centertext">Chyba</p>
-      <h1 class="big lightgrey centertext">404</h1>
+    <div class="article">
+      <h1 class="mdc-typography--headline2">Infoboxík</h1>
+      <p>
+        Zde bude info (nedodělané!)
+      </p>
     </div>
-    <div class="main hidden main-maxheight" id="main-info">
-      <iframe
-        class="youtube"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="article">
+      <h1 class="mdc-typography--headline2">Příběh</h1>
+      <p class="mdc-typography--body1">Zlý Honza! Dal to pryč!</p>
+    </div>
+    <div class="footer mdc-elevation--z2" id="code">
+      <div class="article">
+        <p class="mdc-typography--subtitle1">
+          <span class="copyleft">&copy;</span> 2020 Jan Brabec a Matěj Snášel
+        </p>
+        <p class="mdc-typography--subtitle1">
+          Tento projekt používá open-source projekty
+          <a href="https://material.io/">Material Design</a>,
+          <a href="https://www.marzipano.net/">Marzipano</a> a
+          <a href="https://github.com/cferdinandi/smooth-scroll"
+            >smooth-scroll</a
+          >.
+        </p>
+        <p class="mdc-typography--subtitle1">
+          Pozadí od
+          <a href="https://freefrontend.com/css-animated-backgrounds/"
+            >freefrontend.com</a
+          >
+        </p>
+        <p class="mdc-typography--subtitle1">
+          <a href="https://github.com/HonbraOfficial/skolanew">GitHub - web</a>
+          |
+          <a href="https://github.com/HonbraOfficial/skola2"
+            >GitHub - prohlídka</a
+          >
+        </p>
+        <a
+          class="mdc-fab mdc-ripple-surface top"
+          aria-label="Zpět nahoru"
+          href="#top"
+        >
+          <span class="mdc-fab__icon material-icons">arrow_upward</span>
+        </a>
+      </div>
     </div>
   </body>
+  <script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
+  <script src="./components.js"></script>
 </html>

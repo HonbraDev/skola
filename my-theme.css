@@ -2,9 +2,9 @@
 /*@import url("https://fonts.googleapis.com/css?family=%22Roboto%22&display=swap");*/
 /* theme variables */
 :root {
-  --mdc-theme-primary: #1e90ff;
+  --mdc-theme-primary: #2196f3;
   --mdc-theme-on-primary: #ffffff;
-  --mdc-theme-secondary: #1e90ff;
+  --mdc-theme-secondary: #f37f21;
   --mdc-theme-on-secondary: #ffffff;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-error: #ffffff;

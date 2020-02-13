@@ -1,53 +1,96 @@
 <!DOCTYPE html>
 <html>
-
-<head id="head">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <head id="head">
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="rgb(33,150,243)" />
+    <meta name="apple-mobile-web-app-title" content="Mapa školy" />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F3f621596-6eb5-4189-893c-28b120bf2e4a_output-onlinepngtools.jpg?v=1577997816519"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
+    />
+    <script src="main.js" defer></script>
+    <link rel="manifest" href="pwa.json" />
+    <meta name="theme-color" content="rgb(33,150,243)" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
+    />
+    <meta name="msapplication-TileColor" content="rgb(33,150,243)" />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      type="text/css"
+    />
     <script src="components.js" defer></script>
     <script src="header.js"></script>
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body class="mdl-typography">
+  <body class="mdl-typography">
     <script>
-        header("1");
+      header("1");
     </script>
     <div class="index-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Mapa školy</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Vítejte na stránkách našeho projektu. Cílem našeho projektu je zmapovat Mensa Gymnázium 360° kamerou a potom tuto mapu zpřístupnit online.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="mapa.html">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Mapa školy</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        Vítejte na stránkách našeho projektu. Cílem našeho projektu je zmapovat
+        Mensa Gymnázium 360° kamerou a potom tuto mapu zpřístupnit online.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a
+          class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+          href="mapa.html"
+        >
           Přejít k mapě
         </a>
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="source.html">
+        <a
+          class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+          href="source.html"
+        >
           Zdrojový kód
         </a>
-        </div>
-        <div class="mdl-card__menu">
-            <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+      </div>
+      <div class="mdl-card__menu">
+        <button
+          id="demo-menu-lower-right"
+          class="mdl-button mdl-js-button mdl-button--icon"
+        >
           <i class="material-icons">share</i>
         </button>
 
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                <li class="mdl-menu__item" onclick="shareWhatsapp()">
-                    WhatsApp
-                </li>
-            </ul>
-        </div>
+        <ul
+          class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+          for="demo-menu-lower-right"
+        >
+          <li class="mdl-menu__item" onclick="shareWhatsapp()">
+            WhatsApp
+          </li>
+        </ul>
+      </div>
     </div>
     <script>
-        background();
-          footer();
+      background();
+      footer();
     </script>
-</body>
-
+  </body>
 </html>

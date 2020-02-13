@@ -1,173 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mapa školy</title>
+
+<head id="head">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.css"
-    />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+    <script src="components.js" defer></script>
+    <script src="header.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#212bf3" />
-    <meta name="apple-mobile-web-app-title" content="Mapa školy" />
-    <link
-      rel="apple-touch-icon"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F3f621596-6eb5-4189-893c-28b120bf2e4a_output-onlinepngtools.jpg?v=1577997816519"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2Foutput-onlinepngtools.png?v=1577982927377"
-    />
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+
+<body class="mdl-typography">
     <script>
-      var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
+        header("1");
     </script>
-  </head>
-  <body class="mdc-typography" id="top">
-    <div class="area" id="bg">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <header
-      class=" mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-collapsed mdc-elevation--z5"
-    >
-      <div class="mdc-top-app-bar__row">
-        <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
-        ></section>
-        <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-        >
-          <button
-            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded mdc-ripple-surface"
-            data-mdc-ripple-is-unbounded
-            aria-label="Tmavý režim"
-            onclick="darkmode()"
-            id="darkbtn"
-          >
-            brightness_medium
-          </button>
-          <button
-            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded mdc-ripple-surface"
-            data-mdc-ripple-is-unbounded
-            aria-label="Tmavý režim"
-            onclick="lightmode()"
-            id="lightbtn"
-            style="display: none;"
-          >
-            brightness_high
-          </button>
-        </section>
-      </div>
-    </header>
-    <div class="main-box">
-      <h1 class="mdc-typography--headline3">MAPA ŠKOLY</h1>
-      <h2 class="mdc-typography--headline5">
-        Vítejte u virtuální prohlídky Mensa gymnázia!
-      </h2>
-      <a class="mdc-button mdc-ripple-surface" href="#code">Zdrojový kód</a>
-      <a class="mdc-button mdc-ripple-surface" href="#start">Přejít k mapě</a>
-    </div>
-    <div class="box-container"></div>
-    <div class="article" id="oprojektu">
-      <h1 class="mdc-typography--headline2">O projektu</h1>
-      <p class="mdc-typography--body1">
-        Myslíme si, že to nemusíme vysvětlovat. Mapujeme chodby (a třídy) Mensa
-        Gymnázia a pak je dáváme na web.
-      </p>
-    </div>
-
-    <div class="article iframe" id="start">
-      <h1 class="mdc-typography--headline2" id="iframeText">Mapa</h1>
-      <iframe
-        src="https://honbraofficial.github.io/skola2/app.html#0"
-        id="iFrame"
-        class="mdc-elevation--z2"
-      >
-      </iframe>
-
-      <button
-        class="mdc-fab mdc-ripple-surface full"
-        aria-label="Celá obrazovka"
-        id="fullscreen"
-        onclick="fullscreen()"
-      >
-        <span class="mdc-fab__icon material-icons">fullscreen</span>
-      </button>
-
-      <button
-        class="mdc-fab mdc-ripple-surface exit"
-        aria-label="Celá obrazovka"
-        id="exitfull"
-        onclick="exitfull()"
-      >
-        <span class="mdc-fab__icon material-icons">fullscreen_exit</span>
-      </button>
-    </div>
-    <div class="article">
-      <h1 class="mdc-typography--headline2">Infoboxík</h1>
-      <p>
-        Zde bude info (nedodělané!)
-      </p>
-    </div>
-    <div class="article">
-      <h1 class="mdc-typography--headline2">Příběh</h1>
-      <p class="mdc-typography--body1">Zlý Honza! Dal to pryč!</p>
-    </div>
-    <div class="footer mdc-elevation--z2" id="code">
-      <div class="article">
-        <p class="mdc-typography--subtitle1">
-          <span class="copyleft">&copy;</span> 2020 Jan Brabec a Matěj Snášel
-        </p>
-        <p class="mdc-typography--subtitle1">
-          Tento projekt používá open-source projekty
-          <a href="https://material.io/">Material Design</a>,
-          <a href="https://www.marzipano.net/">Marzipano</a> a
-          <a href="https://github.com/cferdinandi/smooth-scroll"
-            >smooth-scroll</a
-          >.
-        </p>
-        <p class="mdc-typography--subtitle1">
-          Pozadí od
-          <a href="https://freefrontend.com/css-animated-backgrounds/"
-            >freefrontend.com</a
-          >
-        </p>
-        <p class="mdc-typography--subtitle1">
-          <a href="https://github.com/HonbraOfficial/skola">GitHub - web</a>
-          |
-          <a href="https://github.com/HonbraOfficial/skola2"
-            >GitHub - prohlídka</a
-          >
-        </p>
-        <a
-          class="mdc-fab mdc-ripple-surface top"
-          aria-label="Zpět nahoru"
-          href="#top"
-        >
-          <span class="mdc-fab__icon material-icons">arrow_upward</span>
+    <div class="index-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Mapa školy</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Vítejte na stránkách našeho projektu. Cílem našeho projektu je zmapovat Mensa Gymnázium 360° kamerou a potom tuto mapu zpřístupnit online.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="mapa.html">
+          Přejít k mapě
         </a>
-      </div>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="source.html">
+          Zdrojový kód
+        </a>
+        </div>
+        <div class="mdl-card__menu">
+            <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">share</i>
+        </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                <li class="mdl-menu__item" onclick="shareWhatsapp()">
+                    WhatsApp
+                </li>
+            </ul>
+        </div>
     </div>
-  </body>
-  <script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
-  <script src="./components.js"></script>
+    <script>
+        background();
+          footer();
+    </script>
+</body>
+
 </html>

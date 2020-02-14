@@ -6,10 +6,7 @@
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="rgb(33,150,243)"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="rgb(33,150,243)" />
     <meta name="apple-mobile-web-app-title" content="Mapa školy" />
     <link
       rel="apple-touch-icon"
@@ -50,10 +47,11 @@
   <body class="mdl-typography">
     <div class="index-card-wide mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Probíhá konstrukce</h2>
+        <h2 class="mdl-card__title-text">Mapa školy</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        Tato stránka je zatím nedodělaná.
+        Vítejte na stránkách našeho projektu. Cílem našeho projektu je zmapovat
+        Mensa Gymnázium 360° kamerou a potom tuto mapu zpřístupnit online.
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a
@@ -68,6 +66,23 @@
         >
           Zdrojový kód
         </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button
+          id="demo-menu-lower-right"
+          class="mdl-button mdl-js-button mdl-button--icon"
+        >
+          <i class="material-icons">share</i>
+        </button>
+
+        <ul
+          class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+          for="demo-menu-lower-right"
+        >
+          <li class="mdl-menu__item" onclick="shareWhatsapp()">
+            WhatsApp
+          </li>
+        </ul>
       </div>
     </div>
     <script>

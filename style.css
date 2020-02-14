@@ -1,3 +1,15 @@
+iframe.index {
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
 .area {
   background: #4e54c8;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -165,7 +177,7 @@
 }
 
 iframe.mapa {
-  position: aboslute;
+  position: absolute;
   height: 100%;
   width: 100%;
   top: 0px;
@@ -193,5 +205,5 @@ div.page-content {
 @media (max-width: 600px) {
   .index-card-wide.mdl-card {
     width: 100%;
-}
+  }
 }

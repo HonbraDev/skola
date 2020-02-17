@@ -149,11 +149,13 @@ iframe.index {
 }
 
 .index-card-wide.mdl-card {
-  width: 512px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
 }
 .index-card-wide > .mdl-card__title {
   color: #fff;
-  height: 176px;
+  height: calc(100% - 103px);
   background: url("https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692")
     center / cover;
 }
@@ -162,14 +164,11 @@ iframe.index {
 }
 .index-card-wide {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0px;
+  left: 0px;
 }
 
 .article-card-wide {
-  width: 100%;
-  max-width: 750px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,9 +196,17 @@ div.page-content {
   color: black;
 }
 
-.mdl-layout__drawer-button {
-  position: fixed;
-  right: 0px;
+.mdl-layout__drawer,
+.mdl-layout__header {
+  box-shadow: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

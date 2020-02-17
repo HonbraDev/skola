@@ -1,3 +1,12 @@
+window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('sw.js');
+  }
+}
+
 function shareWhatsapp() {
   window.open("whatsapp://send?text=https://bit.ly/hbskola");
 }

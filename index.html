@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html>
-  <head id="head">
-    <title id="title"></title>
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+<html lang="en">
+  <head>
+    <title>Mapa školy</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="rgb(33,150,243)"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="dodgerblue" />
     <meta name="apple-mobile-web-app-title" content="Mapa školy" />
     <link
       rel="apple-touch-icon"
@@ -21,34 +17,54 @@
       type="image/png"
       href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
     />
-    <meta name="theme-color" content="rgb(33,150,243)" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
-    />
-    <meta name="msapplication-TileColor" content="rgb(33,150,243)" />
-    <link
-      rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-      type="text/css"
-    />
-    <script src="components.js" defer></script>
+    <meta name="theme-color" content="dodgerblue" />
+    <script src="material.min.js" defer></script>
     <script src="header.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script>
   </head>
   <body onhashchange="hashChange()">
-    <script>header();</script>
-    <iframe class="index" src="home.html" id="indexFrame" name="indexFrame"> </iframe>
-    <script>footer();</script>
+    
+    <div class="main hidden main-maxheight main-home" id="main-home">
+      <div class="mdc-card mdc-elevation--z2 main-card">
+        <h1>
+          Mapa školy
+        </h1>
+        <hr class="mdc-list-divider" />
+        <p>
+          Mapa Mensa gymnázia
+        </p>
+        <a class="mdc-button mdc-button--raised" href="#mapa" onclick="visMapa();">
+          Přejít k mapě
+        </a>
+      </div>
+    </div>
+    
+      <iframe
+      class="start mainframe hidden"
+      id="main-start"
+      src="https://honbraofficial.github.io/skola2/app.html#0"
+    ></iframe>
+    
+    <div class="btn-back">
+      <button
+        class="mdc-fab hbripple btn-back-inner"
+        aria-label="Zpět"
+        id="btnBack"
+        onclick="backHome()"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">home</span>
+      </button>
+    </div>
+    
+    <div class="main hidden" id="main-404">
+      <p class="centertext">Chyba</p>
+      <h1 class="big lightgrey centertext">404</h1>
+    </div>
+    <div class="main hidden main-maxheight" id="main-info"></div>
+    <script>
+      footer();
+    </script>
   </body>
 </html>

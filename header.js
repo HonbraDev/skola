@@ -1,42 +1,76 @@
-function header(x) {
-document.write("<div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">");
-document.write("<header class=\"mdl-layout__header\">");
-document.write("<div class=\"mdl-layout__header-row\">");
-document.write("<div aria-expanded=\"false\" role=\"button\" tabindex=\"0\" class=\"mdl-layout__drawer-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect\">");
-document.write("<i class=\"material-icons\">menu<\/i>");
-document.write("<\/div>");
-document.write("<span class=\"mdl-layout-title pointer\" onclick=\"location.hash = 'home'\">Mapa školy<\/span>");
-document.write("<div class=\"mdl-layout-spacer\"><\/div>");
-document.write("<button id=\"sharemenu\" class=\"mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect\">");
-document.write("<i class=\"material-icons\">share<\/i>");
-document.write("<\/button>");
-document.write("<ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"sharemenu\">");
-document.write("<li class=\"mdl-menu__item\" onclick=\"copyStringToClipboard('http:\/\/bit.ly\/hbskola')\">Copy link<\/li>");
-document.write("<li class=\"mdl-menu__item\" onclick=\"shareWhatsapp()\"> WhatsApp<\/li>");
-document.write("<\/ul>");
-document.write("<\/div>");
-document.write("<\/header>");
-document.write("<div class=\"mdl-layout__drawer\">");
-document.write("<span class=\"mdl-layout-title pointer\" onclick=\"location.hash = 'home'\">Mapa školy<\/span>");
-document.write("<nav class=\"mdl-navigation\">");
-document.write("<a class=\"mdl-navigation__link\" href=\"#home\" id=\"menu1\">Domů<\/a>");
-document.write("<a class=\"mdl-navigation__link\" href=\"#mapa\" id=\"menu2\">Mapa<\/a>");
-document.write("<a class=\"mdl-navigation__link\" href=\"#oprojektu\" id=\"menu3\">O projektu<\/a>");
-document.write("<a class=\"mdl-navigation__link\" href=\"#source\" id=\"menu4\">Zdrojový kód<\/a>");
-document.write("<\/nav>");
-document.write("<\/div>");
-document.write("<main class=\"mdl-layout__content\">");
-document.write("<div class=\"page-content\">");
-}
+document.write('<aside class="mdc-drawer mdc-drawer--modal">\n');
+document.write('      <div class="mdc-drawer__header">\n');
+document.write('        <h3 class="mdc-drawer__title">Mapa školy</h3>\n');
+document.write(
+  '        <h6 class="mdc-drawer__subtitle" id="navnadpis">Honbra a Akronym</h6>\n'
+);
+document.write("      </div>\n");
+document.write('      <div class="mdc-drawer__content">\n');
+document.write('        <div class="mdc-list">\n');
+document.write('          <a class="mdc-list-item mdc-list-item--activated" aria-current="page" href="#" id="item-home">\n');
+document.write(
+  '            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>\n'
+);
+document.write('            <span class="mdc-list-item__text">Domů</span>\n');
+document.write("          </a>\n");
+document.write('          <a class="mdc-list-item" href="#mapa" id="item-mapa">\n');
+document.write(
+  '            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">3d_rotation</i>\n'
+);
+document.write(
+  '            <span class="mdc-list-item__text">Mapa</span>\n'
+);
+document.write("          </a>\n");
+document.write('          <a class="mdc-list-item" href="#info">\n');
+document.write(
+  '            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>\n'
+);
+document.write('            <span class="mdc-list-item__text">O projektu</span>\n');
+document.write("          </a>\n");
+document.write('          <hr class="mdc-list-divider" />\n');
+document.write('          <a class="mdc-list-item" href="#chyba">\n');
+document.write(
+  '            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bug_report</i>\n'
+);
+document.write(
+  '            <span class="mdc-list-item__text">Nahlásit chybu</span>\n'
+);
+document.write("          </a>\n");
+document.write('          <a class="mdc-list-item" href="#nazor">\n');
+document.write(
+  '            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">feedback</i>\n'
+);
+document.write(
+  '            <span class="mdc-list-item__text">Váš názor</span>\n'
+);
+document.write("          </a>\n");
+document.write("        </div>\n");
+document.write("      </div>\n");
+document.write("    </aside>\n");
+document.write('    <div class="mdc-drawer-scrim"></div>\n');
+document.write('    <div class="mdc-drawer-app-content">\n');
+document.write(
+  '      <header class="mdc-top-app-bar app-bar" id="app-bar">\n'
+);
+document.write('        <div class="mdc-top-app-bar__row">\n');
+document.write(
+  '          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">\n'
+);
+document.write(
+  '            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>\n'
+);
+document.write(
+  '            <span class="mdc-top-app-bar__title">Mapa školy</span>\n'
+);
+document.write("          </section>\n");
+document.write("        </div>\n");
+document.write("      </header>\n");
+document.write("\n");
+document.write('      <main class="main-content" id="main-content">\n');
+document.write('        <div class="mdc-top-app-bar--fixed-adjust">');
 
 function footer() {
-  document.write("</div></main></div>");
+  document.write("        </div>\n");
+  document.write("      </main>\n");
+  document.write("    </div>");
 }
-
-function background() {
-  document.write(
-    '<div class="area"> <ul class="circles"> <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul> </div>'
-  );
-}
-
-document.getElementById("title").innerHTML = "Mapa školy";

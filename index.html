@@ -1,70 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
-    <title>Mapa školy</title>
+    <title>Virtuální prohlídka mensa gymnázia</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="dodgerblue" />
-    <meta name="apple-mobile-web-app-title" content="Mapa školy" />
     <link
-      rel="apple-touch-icon"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F3f621596-6eb5-4189-893c-28b120bf2e4a_output-onlinepngtools.jpg?v=1577997816519"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
+      href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
+      rel="stylesheet"
     />
-    <meta name="theme-color" content="dodgerblue" />
-    <script src="material.min.js" defer></script>
-    <script src="header.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script src="zenscroll.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
   </head>
-  <body onhashchange="hashChange()">
-    
-    <div class="main hidden main-maxheight main-home" id="main-home">
-      <div class="mdc-card mdc-elevation--z2 main-card">
-        <h1>
-          Mapa školy
-        </h1>
-        <hr class="mdc-list-divider" />
-        <p>
-          Mapa Mensa gymnázia
-        </p>
-        <a class="mdc-button mdc-button--raised" href="#mapa" onclick="visMapa();">
-          Přejít k mapě
-        </a>
+  <body>
+    <div class="welcome-screen mdc-elevation--z10">
+      <div class="header main-header mdc-typography--headline3 font">
+        Virtuální prohlídka
+        <div class="mdc-typography--headline1 font big-header">
+          Mensa gymnázia
+        </div>
+      </div>
+      <div class="cards-start">
+        <div class="card-start mdc-ripple-surface" onclick="mensaPage()">
+          <i class="material-icons big-icon">language</i><br />Hlavní web MG
+        </div>
+        <div class="card-start mdc-ripple-surface" onclick="start()">
+          <i class="material-icons big-icon">3d_rotation</i><br />Spustit
+        </div>
+        <div class="card-start mdc-ripple-surface" onclick="info()">
+          <i class="material-icons big-icon">info_outline</i><br />O projektu
+        </div>
       </div>
     </div>
-    
+    <div class="content">
+      <div class="mdc-card header">
+        <h1>
+          O projektu
+        </h1>
+        <p>
+          Tato prohlídka je výsledkem projektu dvou žáků z našeho gymnázia.
+        </p>
+      </div>
+
+      <div class="mdc-card header">
+        <h1>
+          Open-source projekty
+        </h1>
+        <p>
+          <a href="https://www.marzipano.net/">Marzipano</a><br />
+          <a href="https://material.io/">Material design</a><br />
+          <a href="https://zengabor.github.io/zenscroll/">Zenscroll</a>
+        </p>
+      </div>
+    </div>
+    <div class="alternative-content tour">
       <iframe
-      class="start mainframe hidden"
-      id="main-start"
-      src="https://honbraofficial.github.io/skola2/app.html#0"
-    ></iframe>
-    
-    <div class="btn-back">
-      <button
-        class="mdc-fab hbripple btn-back-inner"
-        aria-label="Zpět"
-        id="btnBack"
-        onclick="backHome()"
+        class="tour-iframe alternative-content-iframe"
+        id="tour-iframe"
+        src="https://honbraofficial.github.io/skola2/app.html#0"
+      ></iframe>
+      <i class="material-icons icon-button mdc-ripple-surface" onclick="stop()"
+        >arrow_back</i
       >
-        <div class="mdc-fab__ripple"></div>
-        <span class="mdc-fab__icon material-icons">home</span>
-      </button>
     </div>
-    
-    <div class="main hidden" id="main-404">
-      <p class="centertext">Chyba</p>
-      <h1 class="big lightgrey centertext">404</h1>
-    </div>
-    <div class="main hidden main-maxheight" id="main-info"></div>
-    <script>
-      footer();
-    </script>
   </body>
 </html>

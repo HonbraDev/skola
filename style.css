@@ -1,105 +1,279 @@
-@import "material.dodgerblue.min.css";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
 
-body,
+.mdc-ripple-surface::before {
+  display: none !important;
+}
+
 html {
-  font-family: Roboto, helvetica, arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0px;
-  padding: 0px;
-  height: 100%;
+  padding-top: 100vh;
+  padding-bottom: 30px;
+  background-color: rgb(61, 61, 61);
+  user-select: none;
 }
 
-.mdc-drawer-app-content {
-  height: 100%;
+body.noscroll {
+  overflow: hidden;
 }
-
-.main-content {
-  min-height: 100%;
-}
-
-.mdc-top-app-bar--fixed-adjust {
-  height: 100%;
-}
-
-.main-home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.welcome-screen {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
-  background: url(
-      https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692
-    )center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-image: url("https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692");
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.main-home h1 {
-  font-weight: 300;
-}
-
-.main-fullvert {
-  height: 100%;
-}
-
-.main-card {
-  padding: 20px;
-}
-
-iframe {
-  border: none;
-}
-
-.mainframe {
-  position: absolute;
-  top: 64px;
-  left: 0px;
-  height: calc(100% - 64px);
-  width: 100%;
-}
-
-@media (max-width: 600px) {
-  .mainframe {
-    top: 56px;
-    height: calc(100% - 56px);
-  }
-}
-
-.main {
-  position: absolute;
-  left: 0px;
-  top: 64px;
+.header {
+  text-align: center;
+  vertical-align: middle;
   margin: 0px;
-  padding: 20px;
-  height: calc(100% - 40px);
+  color: white;
+  font-family: "Sen" !important;
   width: 100%;
-  padding: 0px;
+  font-size: 2rem;
+  line-height: 3.125rem;
+  font-weight: 400;
 }
 
-.hidden {
-  display: none;
+.header p {
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  font-weight: 400;
 }
 
-.main-home {
+.header .maxwidth {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+
+.content {
+  padding-top: 100px;
+  width: 100%;
+}
+
+.mdl-card__title-text {
+  color: black;
+}
+
+.big-icon {
+  font-size: 100px;
+  margin: 30px;
+}
+
+button {
+  font-family: "Sen" !important;
+}
+
+.cards-start {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 0px;
-  top: 64px;
-  margin: 0px;
-  padding: 0px;
-  height: calc(100% - 64px);
-  width: 100%;
-  background: url(
-      https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692
-    )center/cover;
+  height: 300px;
+  bottom: 0px;
+  flex-wrap: wrap;
+}
+
+.card-start {
+  width: 33%;
+  max-width: 385px;
+  color: white;
+  font-size: 30px;
+  font-family: "Sen";
+  cursor: pointer;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 @media (max-width: 600px) {
-  .main-home {
-    top: 56px;
-    height: calc(100% - 56px);
+  .main-header {
+    display: none;
   }
+  .cards-start {
+    height: 100%;
+  }
+  .card-start {
+    height: calc(33.3% - 50px);
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 2rem;
+  }
+}
+
+.card-start.main:hover,
+.alternative-content .icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-start.main,
+.alternative-content .icon-button {
+  transition: background 0.5s;
+}
+
+.alternative-content {
+  display: none;
+}
+
+.alternative-content .icon-button {
+  position: fixed;
+  font-size: 80px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  bottom: 0px;
+  left: 0px;
+  transition: padding 0.5s, background 0.5s;
+  transition-timing-function: cubic-bezier(0, 0.5, 0, 1);
+}
+
+.alternative-content .icon-button:hover {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.alternative-content iframe {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border: none;
+}
+
+/*
+body .top-navbar {
+  display: none;
+
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100px;
+  
+  animation: navbar-animation;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  color: white;
+  font-size: 50px;
+
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+.content .mdl-card {
+  background-color: rgb(61, 61, 61);
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.content .mdl-card .mdl-card__supporting-text {
+  opacity: 0.6;
+  color: white;
+}
+
+.content .mdl-card .mdl-card__title-text,
+.content .mdl-card .mdl-card__title {
+  color: white;
+
+  font-family: "Sen";
+  font-size: 50px;
+}
+
+body.scrolled .top-navbar {
+  display: flex;
+}
+
+.alternative-content iframe,
+.welcome-screen {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+.alternative-content iframe {
+  animation-name: margin-animation;
+}
+
+.font {
+  font-family: Sen;
+}
+
+.big-header {
+  text-transform: uppercase;
+}
+
+@keyframes margin-animation {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+}
+
+.cFfQqD {
+  overflow: hidden;
+  position: relative;
+}
+
+.cFfQqD::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  height: 100%;
+  background-color: rgba(61, 61, 61, 0.25);
+  transform: translateX(-50%) skew(60deg);
+  opacity: 1;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+
+.content .mdc-card {
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px;
+}
+
+.content .mdc-card.header {
+  color: black;
 }

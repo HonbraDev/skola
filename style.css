@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600&display=swap");
+@import url("https://fontlibrary.org/face/minecraftia");
 
 .mdc-ripple-surface::before {
   display: none !important;
@@ -17,11 +18,13 @@ body {
   padding-bottom: 30px;
   background-color: rgb(61, 61, 61);
   user-select: none;
+  font-family: Roboto;
 }
 
-body.noscroll {
-  overflow: hidden;
+.noscroll {
+  overflow: hidden !important;
 }
+
 .welcome-screen {
   position: absolute;
   top: 0px;
@@ -52,7 +55,6 @@ body.noscroll {
   vertical-align: middle;
   margin: 0px;
   color: white;
-  font-family: "Sen" !important;
   width: 100%;
   font-size: 2rem;
   line-height: 3.125rem;
@@ -76,17 +78,9 @@ body.noscroll {
   width: 100%;
 }
 
-.mdl-card__title-text {
-  color: black;
-}
-
 .big-icon {
   font-size: 100px;
-  margin: 30px;
-}
-
-button {
-  font-family: "Sen" !important;
+  margin: 10px;
 }
 
 .cards-start {
@@ -96,48 +90,29 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
   bottom: 0px;
   flex-wrap: wrap;
 }
 
 .card-start {
-  width: 33%;
+  width: calc(33.33% - 20px);
   max-width: 385px;
   color: white;
   font-size: 30px;
-  font-family: "Sen";
   cursor: pointer;
-  padding-bottom: 50px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
 }
 
-@media (max-width: 600px) {
-  .main-header {
-    display: none;
-  }
-  .cards-start {
-    height: 100%;
-  }
-  .card-start {
-    height: calc(33.3% - 50px);
-    width: 100%;
-  }
-  .header h1 {
-    font-size: 2.5rem;
-  }
-
-  .header p {
-    font-size: 2rem;
-  }
-}
-
-.card-start.main:hover,
 .alternative-content .icon-button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.card-start.main,
 .alternative-content .icon-button {
   transition: background 0.5s;
 }
@@ -173,53 +148,6 @@ button {
   border: none;
 }
 
-/*
-body .top-navbar {
-  display: none;
-
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100px;
-  
-  animation: navbar-animation;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0, 1, 0, 1);
-  
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  color: white;
-  font-size: 50px;
-
-  align-items: flex-end;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
-
-.content .mdl-card {
-  background-color: rgb(61, 61, 61);
-  color: white;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.content .mdl-card .mdl-card__supporting-text {
-  opacity: 0.6;
-  color: white;
-}
-
-.content .mdl-card .mdl-card__title-text,
-.content .mdl-card .mdl-card__title {
-  color: white;
-
-  font-family: "Sen";
-  font-size: 50px;
-}
-
-body.scrolled .top-navbar {
-  display: flex;
-}
-
 .alternative-content iframe,
 .welcome-screen {
   animation-duration: 1s;
@@ -228,10 +156,6 @@ body.scrolled .top-navbar {
 
 .alternative-content iframe {
   animation-name: margin-animation;
-}
-
-.font {
-  font-family: Sen;
 }
 
 .big-header {
@@ -243,23 +167,6 @@ body.scrolled .top-navbar {
     margin-top: 200px;
     opacity: 0;
   }
-}
-
-.cFfQqD {
-  overflow: hidden;
-  position: relative;
-}
-
-.cFfQqD::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 0;
-  height: 100%;
-  background-color: rgba(61, 61, 61, 0.25);
-  transform: translateX(-50%) skew(60deg);
-  opacity: 1;
 }
 
 .content {
@@ -276,4 +183,51 @@ body.scrolled .top-navbar {
 
 .content .mdc-card.header {
   color: black;
+}
+
+.main-header {
+  position: relative;
+}
+
+.main-header .yellow {
+  color: yellow;
+   font-weight: normal;
+   font-style: normal; 
+  animation: minecraft 1s infinite;
+  position: absolute;
+  top: -25%;
+  left: 60%;
+  transform: rotate(25deg);
+}
+
+@keyframes minecraft {
+  0% {
+    transform: scale(1, 1) rotate(25deg);
+  }
+  50% {
+    transform: scale(1.1, 1.1) rotate(25deg);
+  }
+  100% {
+    transform: scale(1, 1) rotate(25deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    display: none;
+  }
+  .cards-start {
+    height: 100%;
+  }
+  .card-start {
+    height: calc(50% - 20px);
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 2rem;
+  }
 }

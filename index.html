@@ -31,8 +31,13 @@
       href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
     <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
-    <script src="zenscroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zenscroll/zenscroll.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -42,55 +47,72 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="welcome-screen mdc-elevation--z10">
-      <div class="header main-header mdc-typography--headline3 font">
-        Virtuální prohlídka
-        <div class="mdc-typography--headline1 font big-header">
-          Mensa gymnázia
+    <div class="index-window">
+      <div class="text-wrap rellax" data-rellax-speed="5">
+        <div class="mdc-typography--headline3 nadpis">
+          Virtuální prohlídka Mensa gymnázia
         </div>
-        <p class="yellow">
-          Nyní s více IQ v prášku!
-        </p>
+        <br />
+        <button
+          class="mdc-button mdc-button--raised"
+          onclick="prohlidka.spustit()"
+          data-mdc-auto-init="MDCRipple"
+        >
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Spustit</span>
+        </button>
       </div>
-      <div class="cards-start">
-        <div class="card-start mdc-ripple-surface" onclick="start()">
-          <i class="material-icons big-icon">3d_rotation</i><br />Spustit
-        </div>
-        <div class="card-start mdc-ripple-surface" onclick="info()">
-          <i class="material-icons big-icon">info_outline</i><br />O projektu
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="mdc-card header">
-        <h1>
-          O projektu
-        </h1>
-        <p>
-          Tato prohlídka je výsledkem projektu dvou žáků z našeho gymnázia.
-        </p>
-      </div>
-
-      <div class="mdc-card header">
-        <h1>
-          Open-source projekty
-        </h1>
-        <p>
-          <a href="https://www.marzipano.net/">Marzipano</a><br />
-          <a href="https://material.io/">Material design</a><br />
-          <a href="https://zengabor.github.io/zenscroll/">Zenscroll</a>
-        </p>
-      </div>
-    </div>
-    <div class="alternative-content tour">
-      <iframe
-        class="tour-iframe alternative-content-iframe"
-        id="tour-iframe"
-        src="https://honbraofficial.github.io/skola2/app.html#0"
-      ></iframe>
-      <i class="material-icons icon-button mdc-ripple-surface" onclick="stop()"
-        >arrow_back</i
+      <button
+        class="mdc-icon-button material-icons btn-down"
+        onclick="prohlidka.oprojektu()"
+        data-mdc-auto-init="MDCRipple"
+        data-mdc-ripple-is-unbounded
       >
+        arrow_downwards
+      </button>
+    </div>
+    <div class="section-cont sec1 rellax" data-rellax-speed="5">
+      <section>
+        <div class="mdc-typography--headline3">
+          O projektu <span class="mdc-typography--body1">
+            aneb. proč si toto koupit 😅</span
+          >
+        </div>
+        <div class="third-cont">
+          <div class="mdc-card third">
+            <i class="material-icons icon-big">people</i>
+            <div class="mdc-typography--headline5 center">
+              Vytvořeno studenty
+            </div>
+          </div>
+          <div class="mdc-card third">
+            <i class="material-icons icon-big">code</i>
+            <div class="mdc-typography--headline5 center">
+              Open-source
+            </div>
+          </div>
+          <div class="mdc-card third">
+            <i class="material-icons icon-big">question_answer</i>
+            <div class="mdc-typography--headline6 center">
+              A pan Alzheimer nosí dárky?
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="section-cont sec2">
+      <section>
+        <div class="mdc-typography--body1">
+          2020 Open-Source Jan Brabec a Matěj Snášel
+        </div>
+      </section>
+    </div>
+    <div class="prohlidka">
+      <iframe src="https://honbraofficial.github.io/skola2/app.html"> </iframe>
+      <button class="mdc-fab btn-close" aria-label="Close" data-mdc-auto-init="MDCRipple" onclick="prohlidka.vypadni()">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">close</span>
+      </button>
     </div>
   </body>
 </html>

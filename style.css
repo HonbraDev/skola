@@ -28,7 +28,7 @@ body {
   background: url("https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692")
     no-repeat center center fixed;
   background-size: cover;
-  font-family: Roboto;
+  font-family: "Product Sans", Roboto;
 }
 
 .noscroll {
@@ -48,6 +48,7 @@ body {
 
 .index-window .text-wrap {
   text-align: center;
+  font-family: "Product Sans";
 }
 
 .index-window .btn-down {
@@ -59,17 +60,18 @@ body {
 
 .nadpis {
   position: relative;
+  font-family: "Product Sans";
 }
 
 .nadpis::after {
-  content: "Nyní s více IQ v prášku";
+  content: "Nyní s více IQ v prášku!";
   position: absolute;
   top: -50px;
   right: -50px;
   color: yellow;
   font-size: 20px;
   transform: rotate(25deg);
- animation-name: minecraft;
+  animation-name: minecraft;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }

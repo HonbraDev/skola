@@ -1,58 +1,28 @@
-const tourDiv = document.querySelector(".tour");
-const welcomeScreen = document.querySelector(".welcome-screen");
-
-addRipple(".mdc-ripple-surface");
-
-if (location.protocol !== "https:") {
-  location.replace(
-    `https:${location.href.substring(location.protocol.length)}`
-  );
-}
-
-function info() {
-  zenscroll.intoView(document.querySelector(".content"));
-}
-
-function start() {
-  tourDiv.style.display = "block";
-  tourDiv.style.opacity = 1;
-  welcomeScreen.style.display = "none";
-  document.querySelector("html").classList.add("noscroll");
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-function stop() {
-  tourDiv.style.opacity = 0;
-  tourDiv.style.display = "none";
-  welcomeScreen.style.display = "";
-  document.querySelector("html").classList.remove("noscroll");
-  welcomeScreen.style.animationName = "margin-animation";
-}
-
-function mensaPage() {
-  window.open("https://www.mensagymnazium.cz/cs");
-}
-
-function mensaPageProjects() {
-  window.open(
-    "https://www.mensagymnazium.cz/cs/vyuka/skolni-vzdelavaci-programy#footer"
-  );
-}
-
-function addRipple(selector, unbounded) {
-  if (document.querySelector(selector)) {
-    if (unbounded) {
-      var elems = document.querySelectorAll(selector);
-      for (var elem of elems) {
-        var ripple = new mdc.ripple.MDCRipple(elem);
-        ripple.unbounded = true;
-      }
-    } else {
-      var elems = document.querySelectorAll(selector);
-      for (var elem of elems) {
-        new mdc.ripple.MDCRipple(elem);
-      }
-    }
+// const rellax = new Rellax('.rellax');
+mdc.autoInit();
+const prohlidkaElem = document.querySelector(".prohlidka");
+const html = document.querySelector("html");
+const body = document.querySelector("body");
+const prohlidka = {
+  spustit: function() {
+    prohlidkaElem.style.display = "initial";
+    prohlidkaElem.classList.add("animated");
+    prohlidkaElem.classList.add("bounceIn");
+    setTimeout(function() {
+      prohlidkaElem.classList.remove("bounceIn");
+      html.scrollTop = 0;
+    }, 2000);
+    html.classList.add("noscroll");
+  },
+  vypadni: function() {
+    prohlidkaElem.classList.add("bounceOut");
+    setTimeout(function() {
+      prohlidkaElem.classList.remove("bounceOut");
+      prohlidkaElem.style.display = "none";
+    }, 1000);
+    html.classList.remove("noscroll");
+  },
+  oprojektu: function() {
+    zenscroll.intoView(document.querySelector("section"));
   }
-}
+};

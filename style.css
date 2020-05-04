@@ -6,12 +6,12 @@
 }
 
 ::-webkit-scrollbar-track {
+  background: #4287f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 0px;
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border-radius: 100px;
+  background-color: white;
 }
 
 html {
@@ -27,7 +27,6 @@ body {
   background-color: rgb(61, 61, 61);
   background: url("https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692")
     no-repeat center center fixed;
-  background-size: cover;
   font-family: "Product Sans", Roboto;
 }
 
@@ -44,6 +43,11 @@ body {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
+}
+
+.welcome {
+  animation: margin-animation;
+  animation-duration: 1s;
 }
 
 .index-window .text-wrap {
@@ -63,28 +67,27 @@ body {
   font-family: "Product Sans";
 }
 
-.nadpis::after {
-  content: "Nyní s více IQ v prášku!";
-  position: absolute;
-  top: -50px;
-  right: -50px;
+.yellowtext {
   color: yellow;
   font-size: 20px;
-  transform: rotate(25deg);
+  cursor: pointer;
+  /*
   animation-name: minecraft;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+*/
+  -webkit-animation: minecraft 1s ease-in-out infinite, marginbott-animation 1s;
 }
 
 @keyframes minecraft {
   0% {
-    transform: rotate(25deg);
+    transform: none;
   }
   50% {
-    transform: rotate(25deg) scale(1.1);
+    transform: scale(1.1);
   }
   100% {
-    transform: rotate(25deg);
+    transform: none;
   }
 }
 
@@ -127,7 +130,38 @@ section {
   color: black;
   padding: 10px;
   min-width: 300px;
-  transition: transform 0.4s;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  height: 130px;
+}
+
+.third-cont:hover .third {
+}
+
+.third-cont .third:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.third-description {
+  display: none;
+  animation: opacity-animation;
+  animation-duration: 1s;
+}
+
+.third-description a {
+  color: black;
+}
+
+.third-description a:hover {
+  opacity: 0.6;
+}
+
+.third:hover .third-description {
+  display: inline;
+}
+
+.third:hover .third-head {
+  display: none;
 }
 
 .third {
@@ -137,10 +171,6 @@ section {
 .third-cont .third .icon-big {
   text-align: center;
   font-size: 50px;
-}
-
-.third-cont .third:hover {
-  transform: scale(1.1, 1.1);
 }
 
 .center {
@@ -154,6 +184,9 @@ section {
   height: 100%;
   width: 100%;
   display: none;
+  /*
+  animation: margin-animation;
+  animation-duration: 0.5s; */
 }
 
 .prohlidka iframe {
@@ -169,4 +202,26 @@ section {
   position: fixed;
   bottom: 20px;
   left: 20px;
+}
+
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes margin-animation {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+}
+
+
+@keyframes marginbott-animation {
+  from {
+    margin-right: 300px;
+    margin-top: 0px;
+    opacity: 0;
+  }
 }

@@ -23,6 +23,7 @@
       content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729"
     />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <link rel="manifest" href="manifest.json" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -48,7 +49,11 @@
   </head>
   <body>
     <div class="index-window">
-      <div class="text-wrap rellax" data-rellax-speed="5">
+      <div class="text-wrap rellax welcome" data-rellax-speed="5">
+        <div
+          class="mdc-typography--headline5 yellowtext"
+          onclick="prohlidka.splash()"
+        ></div>
         <div class="mdc-typography--headline3 nadpis">
           Virtuální prohlídka Mensa gymnázia
         </div>
@@ -74,27 +79,47 @@
     <div class="section-cont sec1 rellax" data-rellax-speed="5">
       <section>
         <div class="mdc-typography--headline3">
-          O projektu <span class="mdc-typography--body1">
+          O projektu
+          <span class="mdc-typography--body1">
             aneb. proč si toto koupit 😅</span
           >
         </div>
         <div class="third-cont">
           <div class="mdc-card third">
             <i class="material-icons icon-big">people</i>
-            <div class="mdc-typography--headline5 center">
+            <div class="mdc-typography--headline5 center third-head">
               Vytvořeno studenty
+            </div>
+
+            <div class="center third-description">
+              Toto je výsledek školního projektu dvou žáků z našeho gymnázia
             </div>
           </div>
           <div class="mdc-card third">
             <i class="material-icons icon-big">code</i>
-            <div class="mdc-typography--headline5 center">
+            <div class="mdc-typography--headline5 center third-head">
               Open-source
+            </div>
+
+            <div
+              class="center third-description"
+              onclick="window.location.href = 'https://glitch.com/~mensagym-virtual-tour'"
+            >
+              Zdrojový kód najdete na
+              <a href="https://glitch.com/~mensagym-virtual-tour">Glitchi</a>
             </div>
           </div>
           <div class="mdc-card third">
             <i class="material-icons icon-big">question_answer</i>
-            <div class="mdc-typography--headline6 center">
+            <div class="mdc-typography--headline6 center third-head">
               A pan Alzheimer nosí dárky?
+            </div>
+            <div
+              class="center third-description"
+              style="background-color: rgba(0, 0, 0, 0.2); padding: 10px; color: red; font-family: sans-serif; text-align: left"
+            >
+              <i class="material-icons" style="float: left">error_outline</i>
+              Prohlížeč zablokoval potenciálně nevhodný obsah
             </div>
           </div>
         </div>
@@ -109,7 +134,12 @@
     </div>
     <div class="prohlidka">
       <iframe src="https://honbraofficial.github.io/skola2/app.html"> </iframe>
-      <button class="mdc-fab btn-close" aria-label="Close" data-mdc-auto-init="MDCRipple" onclick="prohlidka.vypadni()">
+      <button
+        class="mdc-fab btn-close"
+        aria-label="Close"
+        data-mdc-auto-init="MDCRipple"
+        onclick="prohlidka.vypadni()"
+      >
         <div class="mdc-fab__ripple"></div>
         <span class="mdc-fab__icon material-icons">close</span>
       </button>

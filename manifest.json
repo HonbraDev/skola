@@ -1,0 +1,14 @@
+{
+  "name": "Virtuální prohlídka Mensa gymnázia",
+  "short_name": "Mapa školy",
+  "lang": "cs-CZ",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "white",
+  "icons": [{
+      "src": "https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729",
+      "sizes": "512x512",
+      "type": "image/png"
+    }]
+}

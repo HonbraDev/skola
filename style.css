@@ -1,227 +1,269 @@
-@import url("https://fonts.googleapis.com/css?family=Product+Sans|Roboto:300,400,500,600&display=swap");
-
-/* Track */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: #4287f5;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background-color: white;
-}
-
-html {
-  height: 100%;
-  overflow-x: hidden;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Product+Sans:400,500");
+@import url("https://honbraofficial.github.io/font-awesome.css");
 body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(61, 61, 61);
-  background: url("https://cdn.glitch.com/1734468b-6731-4d78-ab31-25506566ea87%2Fdownload.jpg?v=1580315921692")
-    no-repeat center center fixed;
-  font-family: "Product Sans", Roboto;
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: #23272a;
 }
 
-.noscroll {
-  overflow: hidden !important;
-}
-
-.index-window {
-  height: 100vh;
+index-welcome {
+  display: block;
   width: 100%;
-  color: white;
   position: relative;
+  background-color: #4f37ac;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0854a9), to(#4f37ac));
+  background-image: linear-gradient(0deg, #0854a9 0%, #4f37ac 100%);
+  position: relative;
+}
+
+index-welcome inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 84px);
+  width: 100%;
 }
 
-.welcome {
-  animation: margin-animation;
-  animation-duration: 1s;
-}
-
-.index-window .text-wrap {
+index-welcome inner wrap {
+  display: block;
+  color: white;
+  font-family: "Product Sans", "Roboto", Arial, Helvetica, sans-serif;
   text-align: center;
-  font-family: "Product Sans";
 }
 
-.index-window .btn-down {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+index-welcome inner wrap nadpis {
+  display: block;
+  font-size: 40px;
+  text-align: center;
 }
 
-.nadpis {
-  position: relative;
-  font-family: "Product Sans";
+index-welcome inner wrap nadpis2 {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.yellowtext {
-  color: yellow;
-  font-size: 20px;
+index-welcome inner wrap start {
+  font-weight: 700;
+  font-size: 1em;
+  text-decoration: none;
+  padding: .7em 1.8em;
   cursor: pointer;
-  /*
-  animation-name: minecraft;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-*/
-  -webkit-animation: minecraft 1s ease-in-out infinite, marginbott-animation 1s;
+  display: none;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #FFFFFF;
+  border-radius: 0;
+  padding: 1.2em 3.4em;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: color 700ms ease;
+  transition: color 700ms ease;
+  z-index: 1;
 }
 
-@keyframes minecraft {
+index-welcome inner wrap start::after {
+  color: #FFFFFF;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  content: "Spustit";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: color 700ms ease;
+  transition: color 700ms ease;
+}
+
+index-welcome inner wrap start::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 0%;
+  background-color: white;
+  content: "";
+  -webkit-transition: width 700ms ease;
+  transition: width 700ms ease;
+  z-index: 0;
+}
+
+index-welcome inner wrap start:hover, index-welcome inner wrap start:focus {
+  color: #2e44aa;
+}
+
+index-welcome inner wrap start:hover::before, index-welcome inner wrap start:focus::before {
+  width: 100%;
+}
+
+index-welcome inner wrap start:hover::after, index-welcome inner wrap start:focus::after {
+  color: #2e44aa;
+}
+
+index-welcome .waves {
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+
+main {
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+main iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+main back {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid white;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+main back i {
+  cursor: pointer !important;
+}
+
+main back::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 0%;
+  background-color: white;
+  content: "";
+  -webkit-transition: width 300ms ease;
+  transition: width 300ms ease;
+  z-index: 0;
+  cursor: pointer;
+}
+
+main back:hover, main back:focus {
+  color: black;
+}
+
+main back:hover::before, main back:focus::before {
+  width: 100%;
+}
+
+footer {
+  padding: 20px;
+  width: calc(100% - 40px);
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+#main.show {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+@-webkit-keyframes ldio-pyciwgkmpa {
   0% {
-    transform: none;
-  }
-  50% {
-    transform: scale(1.1);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: none;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-.section-cont {
-  width: 100%;
-  display: block;
+@keyframes ldio-pyciwgkmpa {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
-.sec2 {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(90, 209, 243, 1) 11.2%,
-    rgba(254, 135, 245, 1) 91.1%
-  );
-}
-
-.sec1 {
-  background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
-}
-
-section {
-  width: calc(100% - 40px);
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  color: white;
-}
-
-.third-cont {
-  width: calc(100% - 40px);
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.third-cont .third {
-  margin: 10px;
-  width: calc(33.3% - 40px);
-  color: black;
-  padding: 10px;
-  min-width: 300px;
-  transition-duration: 0.3s;
-  overflow: hidden;
-  height: 130px;
-}
-
-.third-cont:hover .third {
-}
-
-.third-cont .third:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.third-description {
-  display: none;
-  animation: opacity-animation;
-  animation-duration: 1s;
-}
-
-.third-description a {
-  color: black;
-}
-
-.third-description a:hover {
-  opacity: 0.6;
-}
-
-.third:hover .third-description {
-  display: inline;
-}
-
-.third:hover .third-head {
-  display: none;
-}
-
-.third {
-  cursor: pointer;
-}
-
-.third-cont .third .icon-big {
-  text-align: center;
-  font-size: 50px;
-}
-
-.center {
-  text-align: center;
-}
-
-.prohlidka {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  display: none;
-  /*
-  animation: margin-animation;
-  animation-duration: 0.5s; */
-}
-
-.prohlidka iframe {
-  border: none;
-  height: 100%;
-  width: 100%;
+.ldio-pyciwgkmpa div {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  width: 120px;
+  height: 120px;
+  border: 20px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
 }
 
-.prohlidka .btn-close {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+.ldio-pyciwgkmpa div {
+  -webkit-animation: ldio-pyciwgkmpa 0.75s linear infinite;
+          animation: ldio-pyciwgkmpa 0.75s linear infinite;
+  top: 100px;
+  left: 100px;
 }
 
-@keyframes opacity-animation {
-  from {
-    opacity: 0;
-  }
+.loadingio-spinner-rolling-uuhpy9xaw3r {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
 }
 
-@keyframes margin-animation {
-  from {
-    margin-top: 200px;
-    opacity: 0;
-  }
+.ldio-pyciwgkmpa {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  /* see note above */
 }
 
-
-@keyframes marginbott-animation {
-  from {
-    margin-right: 300px;
-    margin-top: 0px;
-    opacity: 0;
-  }
+.ldio-pyciwgkmpa div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
+/*# sourceMappingURL=style.css.map */

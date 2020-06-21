@@ -2,49 +2,46 @@
 <html lang="cs">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mapa školy</title>
-    <link rel="icon" href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.jpg?v=1576924471976" />
-    <meta name="theme-color" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Mapa školy" />
-    <meta name="msapplication-TileImage" content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa školy</title>
+  <link rel="icon" href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.jpg?v=1576924471976" />
+  <meta name="theme-color" content="white" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="Mapa školy" />
+  <meta name="msapplication-TileImage" content="https://cdn.glitch.com/3f621596-6eb5-4189-893c-28b120bf2e4a%2F360-icon.png?v=1577192656729" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.min.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-    <index-welcome>
-        <inner>
-            <wrap>
-                <nadpis>Virtuální prohlídka</nadpis>
-                <nadpis2>Mensa gymnázia</nadpis2>
-                <start role="button" id="btn-start" tabindex="0">Spustit</start>
-                <div class="loadingio-spinner-rolling-uuhpy9xaw3r" id="main-loader">
-                    <div class="ldio-pyciwgkmpa">
-                        <div></div>
-                    </div>
-                </div>
-            </wrap>
-        </inner>
-        <svg class="waves" viewbox="0 0 100 15">
-            <path fill="#fff" opacity="0.5" d="M0 30 V15 Q30 3 60 15 V30z"></path>
-            <path fill="#23272a" d="M0 30 V12 Q30 17 55 12 T100 11 V30z"></path>
-        </svg>
-    </index-welcome>
-    <main id="main">
-        <iframe src="https://honbraofficial.github.io/skola2/app.html" id="mainframe"></iframe>
-        <back id="btn-back"><i class="fad fa-arrow-left"></i></back>
-    </main>
-    <footer>
-        Open-Source 2020 Jan Brabec a Matěj Snášel
-    </footer>
+
+  <loader id="loader">
+    <div class="loadingio-spinner-chunk-b9a69be1jlw">
+      <div class="ldio-i21dsllngm8">
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </loader>
+
+  <main id="main">
+    <iframe src="https://honbraofficial.github.io/skola2/app.html" id="mainframe"></iframe>
+    <more-info role="button" id="info-btn">
+      <i class="fad fa-user-friends"></i>
+    </more-info>
+  </main>
 </body>
 
 </html>

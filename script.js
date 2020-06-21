@@ -16,17 +16,8 @@ self.addEventListener("fetch", function(e) {
     );
 });
 
-document.getElementById("btn-start").onclick = function() {
-    document.getElementById("main").classList.add("show");
-}
-
-document.getElementById("btn-back").onclick = function() {
-    document.getElementById("main").classList.remove("show");
-}
-
 document.getElementById("mainframe").onload = function() {
-    document.getElementById("btn-start").style.display = "block";
-    document.getElementById("main-loader").style.display = "none";
+    document.getElementById("loader").classList.add("loaded");
 }
 
 var cacheName = "mapa-skoly";
